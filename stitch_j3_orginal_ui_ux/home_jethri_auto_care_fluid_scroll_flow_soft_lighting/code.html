@@ -1,0 +1,1340 @@
+﻿<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>JETHRI AUTO CARE - Premium Automotive Customization</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "on-primary": "#393000",
+                        "primary-fixed-dim": "#e2c62d",
+                        "on-tertiary": "#313030",
+                        "surface-container": "#222016",
+                        "outline": "#97917a",
+                        "surface": "#16130a",
+                        "tertiary-fixed": "#e5e2e1",
+                        "tertiary-container": "#e3e0df",
+                        "inverse-on-surface": "#333026",
+                        "charcoal-surface": "#1A1A1A",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-lowest": "#100e06",
+                        "background": "#050507",
+                        "surface-variant": "#38352a",
+                        "tertiary": "#f9feff",
+                        "electric-yellow": "#FDE047",
+                        "secondary-container": "#474646",
+                        "primary-fixed": "#ffe24c",
+                        "surface-container-low": "#1e1c12",
+                        "on-secondary": "#313030",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "glass-border": "rgba(255, 255, 255, 0.12)",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "on-primary-fixed-variant": "#524600",
+                        "surface-container-high": "#2d2a1f",
+                        "on-background": "#e9e2d2",
+                        "surface-bright": "#3c392e",
+                        "secondary": "#c9c6c5",
+                        "on-surface": "#f1f5f9",
+                        "inverse-surface": "#e9e2d2",
+                        "on-primary-container": "#726300",
+                        "surface-dim": "#0a0a0c",
+                        "primary": "#ffffff",
+                        "on-primary-fixed": "#211b00",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "inverse-primary": "#6d5e00",
+                        "void-black": "#030305",
+                        "text-dim": "#94a3b8",
+                        "secondary-fixed": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#646363",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "outline-variant": "#4b4734",
+                        "on-error-container": "#ffdad6",
+                        "on-surface-variant": "#cbd5e1",
+                        "surface-container-highest": "#38352a",
+                        "on-secondary-container": "#b7b4b4",
+                        "surface-tint": "#e2c62d",
+                        "primary-container": "#fde047",
+                        "on-secondary-fixed-variant": "#474646"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "section-gap": "128px"
+                    },
+                    "fontFamily": {
+                        "headline-xl-mobile": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "display-lg": ["Inter", "sans-serif"],
+                        "label-caps": ["Inter", "sans-serif"],
+                        "headline-xl": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "label-mono": ["JetBrains Mono", "monospace"],
+                        "body-lg": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-xl-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.2em", "fontWeight": "700" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["22px", { "lineHeight": "1.35", "fontWeight": "600" }],
+                        "label-mono": ["13px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #030304;
+            color: #e2e8f0;
+            overflow-x: hidden;
+            selection-background-color: #fde047;
+            selection-color: #000;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030304;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 9999px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        /* Apple iOS Liquid Glass Specification */
+        .liquid-glass-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%), rgba(18, 18, 24, 0.65) !important;
+            backdrop-filter: blur(28px) saturate(190%) !important;
+            -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.14) !important;
+            border-radius: 1.75rem;
+            box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.22), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.4), 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            will-change: transform, opacity, filter, box-shadow;
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                        opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                        filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                        border-color 0.5s ease,
+                        box-shadow 0.5s ease;
+        }
+
+        /* Directional Soft Gradient Illumination Layer for Reached Cards */
+        .card-directional-glow {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 1;
+            display: block;
+        }
+
+        /* Top Specular Glare Arc */
+        .liquid-glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 38%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+            pointer-events: none;
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+            z-index: 2;
+        }
+
+        /* Dynamic Spotlight Cursor Highlight */
+        .spotlight-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: radial-gradient(
+                380px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                rgba(255, 255, 255, 0.18) 0%,
+                rgba(255, 255, 255, 0.06) 45%,
+                transparent 72%
+            );
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            pointer-events: none;
+            z-index: 3;
+        }
+        .spotlight-card:hover::after {
+            opacity: 1;
+        }
+
+        /* Refined Tactile Micro-Press & Elegant Radial Glow */
+        .interactive-press {
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+            transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, filter 0.28s ease;
+        }
+        .interactive-press:hover {
+            box-shadow: 0 0 16px rgba(253, 224, 71, 0.16);
+        }
+        .interactive-press:active {
+            transform: scale(0.982);
+            filter: brightness(1.08);
+        }
+
+        .liquid-ripple-container {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            border-radius: inherit;
+            z-index: 30;
+        }
+
+        .ripple-wave {
+            position: absolute;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            pointer-events: none;
+            animation: elegant-ripple 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            background: radial-gradient(circle, rgba(253, 224, 71, 0.45) 0%, rgba(255, 255, 255, 0.3) 25%, rgba(253, 224, 71, 0.12) 55%, transparent 75%);
+            filter: drop-shadow(0 0 12px rgba(253, 224, 71, 0.5));
+        }
+
+        @keyframes elegant-ripple {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0.85;
+            }
+            50% {
+                opacity: 0.45;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(2.2);
+                opacity: 0;
+            }
+        }
+
+        /* General scroll reveals */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(28px);
+            filter: blur(14px);
+            will-change: opacity, transform, filter;
+            transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                        filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.active, .reveal-up.is-visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            filter: blur(0px) !important;
+        }
+
+        /* Service Box Soft Upcoming Frosted Blur Entrance */
+        .service-scroll-reveal {
+            opacity: 0.15;
+            transform: translateY(32px);
+            filter: blur(14px);
+            will-change: opacity, transform, filter;
+            transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 0.8s cubic-bezier(0.16, 1, 0.3, 1), 
+                        filter 0.8s cubic-bezier(0.16, 1, 0.3, 1),
+                        border-color 0.45s ease,
+                        box-shadow 0.45s ease;
+        }
+        .service-scroll-reveal.box-revealed {
+            opacity: 1 !important;
+            filter: blur(0px) !important;
+            transform: translateY(0) !important;
+        }
+
+        /* Card Lateral Border Highlights */
+        .liquid-glass-card.card-left {
+            border-right: 1px solid rgba(253, 224, 71, 0.2) !important;
+        }
+        .liquid-glass-card.card-left .card-directional-glow {
+            background: linear-gradient(270deg, rgba(253, 224, 71, 0.14) 0%, transparent 28%) !important;
+        }
+        .card-left.line-reached {
+            border: 1px solid rgba(255, 255, 255, 0.22) !important;
+            border-right: 2px solid rgba(253, 224, 71, 0.95) !important;
+            box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.3), inset -2px 0 18px rgba(253, 224, 71, 0.24), 0 20px 44px rgba(0, 0, 0, 0.75), 6px 0 20px -2px rgba(253, 224, 71, 0.38) !important;
+        }
+        .card-left.line-reached .card-directional-glow {
+            opacity: 1 !important;
+        }
+        .liquid-glass-card.card-left:hover {
+            transform: translateY(-5px) scale(1.02) !important;
+            border-right: 2px solid #fde047 !important;
+            box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.35), 0 28px 56px rgba(0, 0, 0, 0.82), 10px 0 28px -2px rgba(253, 224, 71, 0.5) !important;
+        }
+
+        .liquid-glass-card.card-right {
+            border-left: 1px solid rgba(253, 224, 71, 0.2) !important;
+        }
+        .liquid-glass-card.card-right .card-directional-glow {
+            background: linear-gradient(90deg, rgba(253, 224, 71, 0.14) 0%, transparent 28%) !important;
+        }
+        .card-right.line-reached {
+            border: 1px solid rgba(255, 255, 255, 0.22) !important;
+            border-left: 2px solid rgba(253, 224, 71, 0.95) !important;
+            box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.3), inset 2px 0 18px rgba(253, 224, 71, 0.24), 0 20px 44px rgba(0, 0, 0, 0.75), -6px 0 20px -2px rgba(253, 224, 71, 0.38) !important;
+        }
+        .card-right.line-reached .card-directional-glow {
+            opacity: 1 !important;
+        }
+        .liquid-glass-card.card-right:hover {
+            transform: translateY(-5px) scale(1.02) !important;
+            border-left: 2px solid #fde047 !important;
+            box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.35), 0 28px 56px rgba(0, 0, 0, 0.82), -10px 0 28px -2px rgba(253, 224, 71, 0.5) !important;
+        }
+
+        /* Buttons */
+        .liquid-btn-primary {
+            background: linear-gradient(180deg, rgba(253, 224, 71, 0.95) 0%, rgba(234, 179, 8, 0.85) 100%) !important;
+            backdrop-filter: blur(16px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.35) !important;
+            box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.7), 0 6px 20px rgba(250, 204, 21, 0.25) !important;
+            color: #0a0a0c !important;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+        .liquid-btn-primary:hover {
+            transform: translateY(-2px) scale(1.025) !important;
+            box-shadow: inset 0 1.5px 2px rgba(255, 255, 255, 0.9), 0 12px 32px rgba(250, 204, 21, 0.45), 0 0 22px rgba(253, 224, 71, 0.4) !important;
+        }
+        .liquid-btn-glass {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%), rgba(22, 22, 28, 0.6) !important;
+            backdrop-filter: blur(20px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.18) !important;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+        .liquid-btn-glass:hover {
+            transform: translateY(-2px) scale(1.025) !important;
+            border-color: rgba(255, 255, 255, 0.4) !important;
+            box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.5), 0 10px 28px rgba(0, 0, 0, 0.5), 0 0 18px rgba(255, 255, 255, 0.18) !important;
+        }
+
+        .service-action-btn {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%), rgba(24, 24, 30, 0.5) !important;
+            backdrop-filter: blur(16px) saturate(160%) !important;
+            -webkit-backdrop-filter: blur(16px) saturate(160%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.22) !important;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35), 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-action-btn .arrow-icon {
+            transition: color 0.3s ease, transform 0.3s ease !important;
+        }
+        .group:hover .service-action-btn,
+        .spotlight-card:hover .service-action-btn {
+            background: linear-gradient(180deg, rgba(253, 224, 71, 0.95) 0%, rgba(234, 179, 8, 0.9) 100%) !important;
+            border-color: rgba(255, 255, 255, 0.4) !important;
+            box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.8), 0 0 24px rgba(253, 224, 71, 0.75) !important;
+            transform: scale(1.08) translateX(2px) !important;
+        }
+        .group:hover .service-action-btn .arrow-icon,
+        .spotlight-card:hover .service-action-btn .arrow-icon {
+            color: #000000 !important;
+            transform: translateX(1.5px);
+        }
+
+        /* Center Timeline Track */
+        #center-timeline-track {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0px;
+            width: 3px;
+            transform: translateX(-50%);
+            pointer-events: none;
+            z-index: 5;
+            overflow: visible;
+        }
+
+        #electric-scroll-line {
+            width: 3px;
+            border-radius: 9999px;
+            background: linear-gradient(180deg, 
+                rgba(253, 224, 71, 0.2) 0%,
+                rgba(253, 224, 71, 0.8) 30px,
+                #fde047 70px,
+                #fde047 calc(100% - 20px),
+                rgba(253, 224, 71, 0.95) 100%
+            );
+            box-shadow: 
+                0 0 8px rgba(253, 224, 71, 0.9),
+                0 0 18px rgba(253, 224, 71, 0.75),
+                0 0 32px rgba(253, 224, 71, 0.45);
+            filter: drop-shadow(0 0 6px #fde047);
+            will-change: height;
+            transition: height 0.08s ease-out;
+        }
+
+        /* Curved Branch Connectors with Smooth Flow & Glowing Transition */
+        .curved-branch-svg {
+            position: absolute;
+            top: 50%;
+            pointer-events: none;
+            overflow: visible;
+            z-index: 6;
+            opacity: 0;
+            transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), filter 0.55s ease;
+            filter: drop-shadow(0 0 6px rgba(253, 224, 71, 0.75)) drop-shadow(0 0 14px rgba(253, 224, 71, 0.45));
+        }
+
+        .branch-left-curve {
+            right: calc(50% - 1.5px);
+            left: 45%;
+            transform: translateY(-50%);
+            width: calc(5% + 1.5px);
+            height: 52px;
+        }
+
+        .branch-right-curve {
+            left: calc(50% - 1.5px);
+            right: 45%;
+            transform: translateY(-50%);
+            width: calc(5% + 1.5px);
+            height: 52px;
+        }
+
+        .curved-branch-path {
+            stroke-dasharray: 220;
+            stroke-dashoffset: 220;
+            stroke-width: 2.75;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            filter: drop-shadow(0 0 5px rgba(253, 224, 71, 0.9));
+            will-change: stroke-dashoffset;
+            transition: stroke-dashoffset 0.12s linear;
+        }
+
+        .curved-branch-svg.is-active {
+            opacity: 1;
+        }
+
+        /* Bottom Details Section */
+        .bottom-reveal-block {
+            opacity: 0;
+            transform: translateY(28px);
+            filter: blur(14px);
+            will-change: opacity, transform, filter;
+            transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                        filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .bottom-reveal-block.is-visible {
+            opacity: 1 !important;
+            filter: blur(0px) !important;
+            transform: translateY(0) !important;
+        }
+
+        #footer-section {
+            transition: border-color 0.8s ease, box-shadow 0.8s ease, background 0.8s ease;
+        }
+        #footer-section.footer-illuminated {
+            border-color: rgba(253, 224, 71, 0.4) !important;
+            box-shadow: 0 -15px 50px -10px rgba(253, 224, 71, 0.16), inset 0 2px 10px rgba(253, 224, 71, 0.22) !important;
+        }
+
+        #footer-wash-layer {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(800px circle at 50% 0%, rgba(253, 224, 71, 0.12) 0%, rgba(253, 224, 71, 0.03) 45%, transparent 70%);
+            opacity: 0;
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 1;
+        }
+        #footer-section.footer-illuminated #footer-wash-layer {
+            opacity: 1;
+        }
+
+        .bottom-interactive-card {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease, box-shadow 0.5s ease;
+        }
+        #footer-section.footer-illuminated .bottom-interactive-card {
+            border-color: rgba(253, 224, 71, 0.22);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+        }
+
+        /* Film Manufacturer Selectable Glass Chips */
+        .film-brand-chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #94a3b8;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            transition: all 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+            user-select: none;
+            cursor: pointer;
+        }
+        .film-brand-chip:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+        .film-brand-chip.is-active {
+            background: linear-gradient(180deg, rgba(253, 224, 71, 0.18) 0%, rgba(234, 179, 8, 0.08) 100%);
+            border: 1px solid rgba(253, 224, 71, 0.7);
+            color: #fde047;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 0 14px rgba(253, 224, 71, 0.3);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .service-scroll-reveal {
+                opacity: 0.2;
+                transform: translateY(28px);
+                filter: blur(12px);
+            }
+            .service-scroll-reveal.box-revealed {
+                opacity: 1 !important;
+                filter: blur(0px) !important;
+                transform: translateY(0) !important;
+            }
+        }
+</style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md relative overflow-x-hidden bg-[#030304]">
+<svg aria-hidden="true" class="inline-defs-container" style="position:absolute;width:0;height:0;overflow:hidden">
+<defs>
+<linearGradient id="liquid-branch-left" x1="1" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#fde047" stop-opacity="1"></stop>
+<stop offset="35%" stop-color="#fde047" stop-opacity="0.95"></stop>
+<stop offset="75%" stop-color="#fde047" stop-opacity="0.85"></stop>
+<stop offset="100%" stop-color="#fde047" stop-opacity="1"></stop>
+</linearGradient>
+<linearGradient id="liquid-branch-right" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0%" stop-color="#fde047" stop-opacity="1"></stop>
+<stop offset="35%" stop-color="#fde047" stop-opacity="0.95"></stop>
+<stop offset="75%" stop-color="#fde047" stop-opacity="0.85"></stop>
+<stop offset="100%" stop-color="#fde047" stop-opacity="1"></stop>
+</linearGradient>
+</defs>
+</svg>
+<!-- Floating iOS Liquid Glass TopNavBar Capsule -->
+<nav class="fixed top-0 left-0 right-0 w-full z-50 bg-[#07070a]/75 backdrop-blur-2xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-all duration-300">
+<div class="max-w-7xl mx-auto px-4 md:px-8 py-3.5 flex items-center justify-between">
+<div class="flex items-end gap-1.5 group cursor-pointer interactive-press rounded-full py-1 px-1.5 transition-transform duration-300 hover:scale-[1.02]"><div class="flex items-end justify-center">
+<img alt="JETHRI AUTO CARE Logo" class="h-8 md:h-9 w-auto object-contain transition-transform duration-300 group-hover:scale-105 block leading-none" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWwgR-Sz5pP_DreYE4ugH_CdBGDdM9HS5IFrRMQ0ZAAVlEc1X7-Lmg4eY1Nhm2yKG8DjwTSOKk_dH1RJI_zKTYJSdGQBQRTjQV9zW26kxceR_TAVcarjVHBr3uA_9m_BDfse4THrV1QL3LBFFYB9Z2RZTPGSoDP_qsmq1BTNbFi6se3g-Ukqzql7PwQdhBAOZf2c60-LlvKFnUxQ4ZMv3z6pP1f90B0-VD8ebTqakfri424MdvBK_EA9YEGiy-GlZt_g">
+</div>
+<span class="font-display-lg text-base md:text-lg tracking-tight text-white font-bold hidden sm:inline-block drop-shadow-sm leading-none">AUTO CARE</span></div>
+
+<div class="hidden md:flex items-center gap-1 p-1 bg-white/[0.04] border border-white/15 rounded-full backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]">
+<a class="interactive-press px-4 py-1.5 text-xs font-semibold rounded-full bg-white/10 text-electric-yellow shadow-[inset_0_1px_1px_rgba(255,255,255,0.25)] transition-all hover:scale-105" href="#">Home</a>
+<a class="interactive-press px-4 py-1.5 text-xs font-semibold rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all hover:scale-105" href="#services">Services</a>
+<a class="interactive-press px-4 py-1.5 text-xs font-semibold rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all hover:scale-105" href="#">Sun Film</a>
+<a class="interactive-press px-4 py-1.5 text-xs font-semibold rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all hover:scale-105" href="#">About</a>
+<a class="interactive-press px-4 py-1.5 text-xs font-semibold rounded-full text-slate-300 hover:text-white hover:bg-white/10 transition-all hover:scale-105" href="#">Contact</a>
+</div>
+<div class="flex items-center gap-2.5">
+<a class="interactive-press hidden sm:inline-flex items-center gap-1.5 px-3.5 py-1.5 md:py-2 rounded-full border border-white/15 hover:border-white/30 bg-white/5 hover:bg-white/15 text-white font-label-caps text-[11px] font-semibold tracking-wider transition-all duration-300 hover:scale-105 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)]" href="#login">
+<span class="material-symbols-outlined text-sm text-electric-yellow leading-none">lock</span>
+<span class="">Login</span>
+</a>
+<button class="liquid-btn-primary interactive-press px-3.5 md:px-4 py-1.5 md:py-2 rounded-full font-label-caps text-[11px] font-bold uppercase tracking-wider flex items-center gap-1.5 shadow-[0_0_16px_rgba(253,224,71,0.3)]">
+<span class="">Book Now</span>
+<span class="material-symbols-outlined text-xs leading-none font-bold">arrow_outward</span>
+</button>
+</div>
+</div>
+</nav>
+<!-- Main Content -->
+<main class="flex-grow relative z-10">
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center justify-center pt-28 pb-20 overflow-hidden" id="hero">
+<div class="relative z-10 w-full max-w-[1440px] mx-auto px-margin-mobile md:px-margin-desktop text-center flex flex-col items-center justify-center">
+<div class="reveal-up active mb-4 flex justify-center is-visible">
+<img alt="J3 Auto Care Logo" class="h-auto mx-auto object-contain drop-shadow-[0_8px_20px_rgba(253,224,71,0.3)] transition-transform duration-500 hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOVjP9sNwLX23LAluQRE_1fWsctBoQbpvF-zM6IYEVHMBi9zthzeOLnVAXeS_DsOcOhcti5pFI7-F9aNLT5hfkRLOFdHfqCecMhnsFPx64M6tGiqQ8e8FCEadHylPrSss_ZbFYQBgS_2TCMJv8_vnN43tSbmyCGwM8K5960RiYSPWQnHIDvD-Ag7D-9a-jYTt_FaKeWQr6Ix4E7M7RczI_fu8tQhobTvrD400J6ShiccrSX7vZwytRVIWeJnZuIEmseg" style="width: 78px;">
+</div>
+<h1 class="font-display-lg tracking-[0.22em] mb-6 reveal-up active uppercase leading-[1.1] text-center font-bold relative select-none md:text-headline-xl text-headline-md flex justify-center is-visible">
+<div class="relative flex justify-center items-center">
+
+</div>
+</h1>
+<div class="reveal-up active max-w-2xl mx-auto mb-8 is-visible" style="transition-delay: 100ms;">
+<p class="text-slate-300 font-body-md text-body-md font-normal leading-relaxed text-center px-4">Precision engineering, bespoke surface transformations, and elite tinting</p><div class="">&nbsp;tailored for discerning automotive enthusiasts.</div><p></p>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-center gap-4 reveal-up active w-full sm:w-auto mx-auto p-1.5 rounded-full backdrop-blur-md is-visible" style="transition-delay: 200ms;">
+<a class="liquid-btn-primary interactive-press w-full sm:w-auto inline-flex items-center justify-center gap-2.5 px-7 py-3.5 font-label-caps text-label-caps font-bold tracking-wider rounded-full shadow-sm" href="#services">
+<span class="material-symbols-outlined leading-none text-xl">tune</span>
+<span class="">Explore Services</span>
+</a>
+<a class="liquid-btn-glass interactive-press w-full sm:w-auto inline-flex items-center justify-center gap-2.5 text-white px-7 py-3.5 font-label-caps text-label-caps font-bold tracking-wider rounded-full" href="#">
+<span class="material-symbols-outlined leading-none text-xl text-electric-yellow">calendar_month</span>
+<span class="">Book Consultation</span>
+</a>
+</div>
+</div>
+</section>
+<!-- Partner Logos Infinite Marquee -->
+<section class="relative w-full overflow-hidden z-10 border-y border-white/5 bg-[#050507]/80 py-8 reveal-marquee-up is-visible active" id="brand-partners-marquee" style="filter: none !important; -webkit-filter: none !important; backdrop-filter: none !important; -webkit-backdrop-filter: none !important;"><style id="marquee-scroll-entrance-styles" class="">  #brand-partners-marquee {
+    opacity: 0;
+    transform: translateY(36px) scale(0.99);
+    transition: opacity 1.35s cubic-bezier(0.16, 1, 0.3, 1), transform 1.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 1.2s ease;
+    will-change: opacity, transform;
+  }
+  #brand-partners-marquee.is-visible, #brand-partners-marquee.active {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+  #brand-partners-marquee .marquee-wrapper {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.15s, transform 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+    will-change: opacity, transform;
+  }
+  #brand-partners-marquee.is-visible .marquee-wrapper, #brand-partners-marquee.active .marquee-wrapper {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }</style><style>
+    @keyframes marqueeScrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes marqueeScrollRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+    .marquee-track-left {
+      display: flex;
+      width: max-content;
+      animation: marqueeScrollLeft 32s linear infinite;
+    }
+    .marquee-track-right {
+      display: flex;
+      width: max-content;
+      animation: marqueeScrollRight 32s linear infinite;
+    }
+    .marquee-mask-edges {
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 88%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 88%, transparent 100%);
+    }
+    .brand-logo-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, filter 0.3s ease;
+      height: 56px;
+      user-select: none;
+    }
+    .brand-logo-item:hover {
+      transform: scale(1.12);
+      filter: drop-shadow(0 0 16px rgba(253,224,71,0.6));
+    }
+    .brand-logo-item img {
+      height: 44px;
+      max-height: 46px;
+      width: auto;
+      object-fit: contain;
+      mix-blend-mode: screen;
+    }
+    .logo-pure-white {
+      filter: drop-shadow(0 0 6px rgba(255,255,255,0.45));
+    }
+    .logo-native-yellow {
+      filter: drop-shadow(0 0 8px rgba(253,224,71,0.55));
+    }
+</style>
+<div class="marquee-wrapper marquee-mask-edges flex flex-col gap-6 md:gap-8 w-full overflow-hidden select-none py-2">
+<!-- Track 1 (Gliding Left): Cadence White -> Yellow -> White -> Yellow -> White -> Yellow (W -> STC -> 3M -> Menzerna -> K -> Garware) -->
+<div class="flex overflow-hidden w-full">
+<div class="marquee-track-left flex items-center gap-14 md:gap-16 pr-14 md:pr-16 flex-nowrap shrink-0">
+<!-- Set 1 -->
+<div class="brand-logo-item shrink-0 logo-pure-white"><img alt="W Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXe1SE6fBm84q02AwFjwnQG1saUr3ocp_klbX1YGAzuBMB_SKWAiPK8n2tJXLfz3Bj1fDdUGMzyP72PBLZHFBAc_Kfqp6CldbtCwG1Bjp2v_g2JUrvj5ZK_gOm5Svm11CWNyfBFXB-SLQlPvHIzlRh4ScHj3itN_975La4IIq5jgI5ZVs59zs-CWEyEzPkgi85LvBLt7GmW3qYYGgy4Lzs4zsf6OUNFH1t2xr2bHVLkghrNGorH5GHYggKS8gCT-tdCA"></div>
+<div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="STC Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmNIH-SKZsc6TtWe1ZXVHYgKVze9cROrFa3WwqxCtILoXvECY5sfGj_DVfJGEiv6OC0US3CBS73L0bh6qm6GUDrxChE3eCVVDsW005FU3fwRbUiHyaSN7c_JyJNE4a8z3LolXeK3nmlMafBZBQyYkfNsW3P_kqqYU3zrBwTx8LK43ssqcqYRzpJY_jG0VzhAEpJOIznKJxgzllQFOCUhi9PE26sUWDXSnYEzFFsJoyD9ARoSd6W8l6diTHhrQyuv3-aQ"></div>
+<div class="brand-logo-item shrink-0 logo-pure-white"><img alt="3M Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAubQYTDlQdbM9Y043fOJqdKFSyJzgOvC-YmGFBVR1jvbK_xYZDFbBXywfZt7MNdaIBTYbfq76ZHb0VNbJ1WHXT4PqQmZlGT7DNpyqCc7bXd1oWxhc5LdNkLCoZAo7aB6V5o-ilfbb_JcDuqw8keBicZ59917UvlT_EPaDQJj8AcOCV19kNre_x3S4gAWaP2Qo_uBrxagff_FDcXTnyhqufxnUFC9mAWgpeJm5VWMBM7eeKDumK34RR0luSDu6ALHPyzw"></div>
+<div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Menzerna Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9x67N9wuclmvYrklBV1SZiTXP7p7kF3rq6trwItlEdOxjS6G5y6y7GGOd3dcWkS5zaRt2NbbIQZQCNlsNW5YD7CaeByw-fu8ZVsluzrUcU4dSAZBjPta-zyV3A8G2ohV3hZu8Adc9Mh8tLUzp8z0p41Z33-Hu--QehZ6tHbbbtms8u5l63u656BKzR4S0HpLZx9tPL9q9naRlt4CPSj8gGuZtIYfAt5liQoECpkdO1tKKrBl6pfS2wNtRwX5FoiwbUg"></div>
+<div class="brand-logo-item shrink-0 logo-pure-white"><img alt="K Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb-pod_EBk_vMTCpM_tin-9_37MxtV-Ncpa7TI-coPf2iTK1wcyZDwq3ix036OFnQf3TWgkHgvRYtTah02FBZ9eUUDRT5HjpbQ0r9JGJiJo1k4KeYnnijeXbCIwkFxw-8lF_BVvUk0nJVCZAKU8AwY5ETuwc1hPn8nxUSIrB4WLs9_sg8UR-DGFv_Vs_xmHhPzXsUdYPncTFNYHp7Nn0Y9BsxxDC70X90UdzKa7Qx0zCMRNbSI93vADD2tlcbBZNsa1g"></div>
+<div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Garware Hi-Tech Films Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZh9zqtnxtxzsYUGlNoiq1rxdHR_pstPTFSJV2FSWSKzFld04YcoSOVNBvIXV7th4HdpI7KyvwKjtDjjvR6fh2gsxxIXfgsy41O4WpZnxk0Y4UYvnQuq-1HWCj5ywoDOIb96Ir_VCPoM18mxFsG3AUyzBsUkJcDckTKL-cPpkE3ZgQcVZXcDzedIgVMRg9GXHfnxuA0zKMIuMbItnHomJuqMh8EEIsQ2DMUt-MQzcZ8eEzXt-MCvJjF5x0WM7LPr6lqg"></div>
+<!-- Set 2 (Repeat for seamless infinite loop) -->
+<div class="brand-logo-item shrink-0 logo-pure-white"><img alt="W Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxuYeeGrVb5zEksHFOocjOr-Yet5mu5C47AwsVXFO-UMInVFLAOCfYkMnbcwQ251WmVYORDeEkXgl8UKbNn-2JeIAQ80QjIVH0UM5oDwQoeOk2PiVKvJrqQ8ixr2VIAcfdJ9tWlId8Adpjsy8auyrcqVLQ3SlSyuqHoVDVGZFG3792lbCzlEshUw_f5ZPlIofqx6XH3xJ3_KYiHgHNmltuR8CK0bZ70D9UxLsi8HoDgJV7CmW7AJKAL8jdVdfZ5008Iw"></div>
+<div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="STC Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAzSIoEBxQjirlU-dyE-iqgTs0YJsK8j96RkAYT1N98GswTINquTAiqh9p2l4OPG1XHiCq2WiGWgELHek6VyTsQai0vDEpEiF6JMGvFLaP9ZG-f0Ip8W1hgJCM0INayRNe0lls3VbU_O9pdGVYpRxI9-EzGRBn00OqtGSsS78Ne7JS1EXbjVu7UA2qj7RHWL4kOvzsykCQmGjfrEQt0f4_kjUtUfekzxI5M67I9YhOST6OzlWuWN2X8cORS7E2ypoV-w"></div>
+<div class="brand-logo-item shrink-0 logo-pure-white"><img alt="3M Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3xCsO3WmurYsFGYcDdOBBuFl2MmFtOqATHiFY99C7WQsCbEEIxEGNKX0nfRC920BeRTHER-w4NzGkTQeX0q8ExslrubAi8_rmUsk1YVR5bArA-1FKcmKWjzp8Ia1Lvc_QM8lpgHKDQO6C91zmaJBcWka_pChEwc2DiK1Tj9X5lqnMcDUV7ZvYd7kHciGr0nKQRZrbgAoJz49ThHBuBaXSlVfSB7c8jTuwyqSCGhahrNGT2NgDp50G69lmNNMFZnFSnA"></div>
+<div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Menzerna Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaO2BWxJ5h6Z1bfwLjnKgFGg62rv31z-TtDWDJ8-RwR0lai6Tk4W_Odl76R1MU5UakFQ70f0C0TryH1DWftyjrrFec-KA5vZSbV16LcKqm0Bz6PzxpaCpsBdSEiePr4aZnPx25cVoAPOx8Pms3ClbU4AEfNWPT80I7TCswFzax4dfaRfmGiC_mDF8q_0aMb6QHkWzpE2q0OoRveFejxETELSbXCwIDanino0x_qEHYXMZVJ5pFHRGoGtmMTA9IKX_Rww"></div>
+<div class="brand-logo-item shrink-0 logo-pure-white"><img alt="K Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMuWyXlM1z9LyRiCmfwLCwnNt3--2glBriDoemRXJkTn-engzxVBn3m-VTtGJuepZIK02u7_XDbAr02QYvMwVbj8yG_LK2eWgCDH1DyjEoxPTbRtZjBTpHHmAQVcJKP7xzLQTLLIguKPYkKbCWPRvJR-6BzUogrU9M_NwOrBJ_gky2TNQCgC8zMTPdulqCm9VH-sJV6_pgx3MOWpOrJGoAxaugKLG-7LdIkUNE_PMHKjtmFy8m6tXy6aYy0XLRg2i6SA"></div>
+<div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Garware Hi-Tech Films Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq3jtd9NMYylP5Q2yJUbpSGK_UUODbuTlPVbS8BC7r9cOEf7uJZUkqbPr-IXD1hjbms1b2w7lWaPzAivtQJjc1gUglA9AWxiLyspKbCGVd5RFWjKu6rNrwPlfuEzJTd6V96gHhhpqxX3GuvHp_X96Flv-3aODq0adxPvNy3LYU-m_1V9oiQvrk1JExI_YwcX2h0Yisrt4KOuvrYGH3ykeBrnEuBRqUF8SMu_RFBe-w6SlN7ikWVyttO4ZhIqKflNBVPQ"></div>
+</div>
+</div>
+<!-- Track 2 (Gliding Right): Distinct Cadence White -> Yellow -> White -> Yellow -> White -> Yellow (K -> Menzerna -> W -> Garware -> 3M -> STC) -->
+<div class="flex overflow-hidden w-full">
+<div class="marquee-track-right flex items-center gap-14 md:gap-16 pr-14 md:pr-16 flex-nowrap shrink-0">
+<!-- Set 1 -->
+<div class="brand-logo-item shrink-0 logo-pure-white"><img alt="K Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZyAjkd5G-g7NbEvNzfQnDpov8eYPxKfZlorrTgslLZ80w0ZlcUu6-8fTlb-kZ0k6_z61UbiZ88xJoujL_cIzP76EbeUep5UjX3bamj5EAIZm67l5Z5ihzUhcptt8MMx7siHwWStbfqOeivEObBiQqISxfkGiQR3cWtQGrmDJa-C7RCxzOJVNTQ8wb_mlpsVyXMDv05ugksuegUehkWOHqS2VhEuQoU4Z5E_yxHsVGwHTu192ZOSvebI_5Z7MSZpXPbQ"></div>
+<div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Menzerna Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1IBCjHiK_URMShciA7aik0kfqTzKwy67QyfPwnH42pE2idX5ldecV-WaW7yA3JhAJ8Sv0b8DqesqmvrJpDcGNK6Pqt158TUo6krNV3P1HMnzLhoIYMGk5G3pJ_tOuSO3EEKlXI7PPx2nsoov2PYhuKTHogCYkZhWC507pMu3m2LJrzwruKOcmCBy6svWKGFaBIqIR88B4bGnfoMLCmL7ds1qQugJpV4DGAmZTwjRJvXMwGCPTwc6ou9_g92CGDT4IJg"></div>
+<div class="brand-logo-item shrink-0 logo-pure-white"><img alt="W Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6qpcqWuIl-Iex_benciwKjrlzVx3klG6e01_c7TaGTLa2AvY7KCYORekCEkws2OE4l207lQqfDYZp-1ZDqn5_1IAX79xsTcUF3NutYQuGH1BNJYst69HohV2e9uq9DDGMNYXlr7f3zohgbY6rZut9m6YnGbXN4rTDSRlfVGyYXzfU7nVdJdsJvJ41lhTNVsexDXJz4beUyF7b5jl6pz5ooAdecKA8qivZDZfjsfSLR0MMEmsMGlZzrafas8mgmpBtAg"></div>
+<div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Garware Hi-Tech Films Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjJzNqDVBkPeDga9SzGR156gDkoVZCkpG9RwZT973bpwomovHahYkQzQ2e4moRl1EgdN6LhOiOfKSpnBRxeW7wqnfRPkoZGQcxs65CVrVm4MVKr4qrUAysUVpgMl77AMBS8-n-aK3V8MibpErNvRUkPKCTSGvOs__ERfhnoedKDAqR7abUfQEyIaTVHqMoe5u2HW3j3ChQawyBRhJus4oYGGG0gxb2mPOYosAHdgFnDXG45WfJlpz3nfM7UQgJ1Zao9g"></div>
+<div class="brand-logo-item shrink-0 logo-pure-white"><img alt="3M Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsdjfHRfdLcySr1sYjA7U-HR2pDA7z6sfx2VUt3INy8ctp9ymMqyHrPWxtRBuaUvidg43a8W1eRgemq3q6qGPosCPXb84PAsECSVSO6DgVz5TbIpWu3wzOu2S4SFHt8D46ezsg_EKpeeqheTZhQKNMVuF6DRbuFL6AyH2TJN1QuKzB4Z5i_mrwHkdU1y7Q5DaOiosN1Jpl-IMnJwrqiuy4FpQ3hs2aWcV7FNG3VhGV5wIW1oD_-eaYcaPp-ehJ3cMG1A"></div>
+<div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="STC Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYVzVAQ-5GEPk5eeZYyg_NtAAI6z9V9mW6edqmok1zmbVx7w7K2M1eGYIuzoMy27nCHonzApCtI9OfQyAS_iOf5pRP6ODz5gMfQQ7T-TcGyFeg5-Mnm0U6ic1ZQHNLiJgua7GywsIDY45C5cXi1_T8Pc7QFIxUkq0iSUT5kRlcBRMnOxYYn2QVl2Gvo6M8TA6I4AAFVyEZSQwk6Dpp2tFyhTd2RRjxhP_Xmw8eO1lcUM2VHQI4l4aPj5nM-nfD6NVpLg"></div>
+<!-- Set 2 (Repeat for seamless infinite loop) -->
+<div class="brand-logo-item shrink-0 logo-pure-white"><img alt="K Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj8uwK1uvtklBbwcjxY-0F3o1nL36KFOI9b-GLfmd2szfONCvABCu8xNjQj-U7Z0zfh7JjCU57Wur_tQqWK6novW_zXFzKtcWhs2vUacMgTRDPYknK3nv6PZ1yqqHjHU0atrj7CF9r5eO1oCFe19Wig6Jp8xVrlXZiB5XMSGvFut_xqa3_CPepDDhCV38r6n0amROeONV-AZA2Xygucebfl4cUXkjUtzINPRxVE1edI2tbiwfgdvug_Gqal1UYv3NDbg"></div>
+<div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Menzerna Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_uO4N8FqwGUiGlbfD1Jd8eVaLnZfMhzQtzN24Q2vepCV9HXc5tHQYegdZxPjCys1rJo_8pRUGc-RGeOHMU4e9EFLrdSpYdkwgtMqzWWlqs_YDQS4jTTUUrGrSUfWdibBo2snU85Gqa3lvz_YgCdNblw35VtWbLLmbX01zTTQ1yb5Ge0K_fgZvoOcqiAuxVhrOXarihEY8oG0dzQDadD2YQP-qu_FPxPpwpYMGXzz_bFllDrMxcUbcwfe0qnv1xuh5bg"></div>
+<div class="brand-logo-item shrink-0 logo-pure-white"><img alt="W Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGblCrByn6LgQlgzgnb19_QwZOn6UPxdpyKOEjjeYdoFrozFpuZ2QREmoRmQHFSqNZVnJxU8zCDo0rHbBDo8724W9-n4O1bYixfxD_UrjCgymjRk32s2dMqfYeYVZx2r6hhqZyzht25FrwRKCDEIroH9ySTTi-_7CeMUx5jj4HyiIRRVQFmUTEP2J5zvwdX6RyVLlIhADOILWqE6gy27dkkBAxixVaUkU1IYLSG0ThEbA0_9vMk0XP1m9CJeIBr938eg"></div>
+<div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Garware Hi-Tech Films Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUIw8x1cIwW0OaERD4MYM3yxr0g8-hbtTgSezx8k67-AwBVXVkPQKeL3adlc2lD9lHHJ1vNcctEX2UJkxUnTDYD-Ep3v7UGqGHgU26d1Na0iZhJS3vovVfYyqxpwzRRe9Bc91S0VrX7GeRvVT68NbB37Bq9LKY_oMtFWQVR8Ey2hVQGSyZDMFlt2E-kuJwEIPgX6sFIikoBTobCrxY5se_B_X72PCQIKJnDBHBOSM6x7_Eix5wVbOsb7W167W9xA-zGg"></div>
+<div class="brand-logo-item shrink-0 logo-pure-white"><img alt="3M Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx_HiEEWl_tMd5jEjNESHESw9iX1S7t_IrJrBbI4z1rfd3dNt8dvr_qBtyo6Z4FoLQBl8L-DbPu6hNC_Bwkm5BtpLaQweF-CDUo-JTQTDFVZPYC_wTNq36Ujquz3_xe-rOTtTuEDv0k5nNFcnSiwy8v3Qzc9IiC4wFnOcQ9V_VX3NgKKRjp_AfZQJ-iN0K2UX2_O5vW6sXxDg1u0jbt7xvrrOWDw2TGeAk9k5rNfvedYlzztMdeQ9vn53pCzJK5ZmNzw"></div>
+<div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="STC Logo" class="h-11 md:h-11 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNzoZT4Nzm0JR3UFqJzbf1KhGp8MWniDd5LLomJsAo98H6HnsY_Fug0o9BKLmoP9joWUESUl3E3DQtWfMThF3U0SYYhHzZwNfG3NDboe-fH1IPsFOkfGH4RnZMRm1y7Pj9gRsnfHD9fWfwEyzTYWDt0Pz3Iu10YnscKKbTdUJ5G3vIP1wMKR0h-8qkaE4cZvX51dSPuL3C4kK1c2N06RLkWvIUoYD2huefXSMk_AUkmiSQQYir05T9G8cbE2ZMjLD90A"></div>
+</div>
+</div>
+</div>
+<script id="marquee-entrance-observer" class="">
+  (function() {
+    const marquee = document.getElementById('brand-partners-marquee');
+    if (!marquee) return;
+    const checkVisibility = () => {
+      const rect = marquee.getBoundingClientRect();
+      if (rect.top <= window.innerHeight * 0.92) {
+        marquee.classList.add('is-visible', 'active');
+      }
+    };
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            marquee.classList.add('is-visible', 'active');
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+      obs.observe(marquee);
+    }
+    window.addEventListener('scroll', checkVisibility, { passive: true });
+    checkVisibility();
+  })();
+</script></section>
+<!-- Services Section with Synchronized Liquid Center Line & Frosted Reveal Boxes -->
+<section class="relative max-w-[1440px] mx-auto z-10 px-4 md:px-8 pb-20" id="services">
+<!-- Section Header -->
+<div class="text-center mb-16 reveal-up active is-visible" id="services-heading-block" style="transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);">
+<h2 class="font-headline-xl text-headline-xl-mobile md:text-headline-xl text-white tracking-tight mb-4 drop-shadow-sm">
+        Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-electric-yellow via-yellow-200 to-electric-yellow">Services</span>
+</h2>
+<p class="font-body-md text-body-md text-slate-400 max-w-2xl mx-auto">
+        Elite technical applications designed to elevate and protect&nbsp;</p><div class="">your vehicle's aesthetic and structural integrity.<br></div><p></p>
+</div>
+<!-- Alternating Bento Flow Container -->
+<div class="relative flex flex-col gap-16 w-full max-w-[1440px] mx-auto py-4" id="services-flow-container">
+<!-- Center Axis Electric Yellow Scroll Timeline -->
+<div class="hidden md:block" id="center-timeline-track">
+<div id="electric-scroll-line" style="height: 1792.37px;"></div>
+</div>
+<!-- Card 1: Tinting (Left) -->
+<div class="flex flex-col md:flex-row justify-start w-full relative" data-service-index="0">
+<svg class="curved-branch-svg branch-left-curve hidden md:block is-active" fill="none" preserveAspectRatio="none" style="left: 45%; right: calc(50% - 1.5px); width: calc(5% + 1.5px); opacity: 0;" viewBox="0 0 100 52" xmlns="http://www.w3.org/2000/svg">
+<path class="curved-branch-path" d="M 100 0 C 100 24, 60 52, 0 52" stroke="url(#liquid-branch-left)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.75" style="stroke-dashoffset: 0;"></path>
+</svg>
+<div class="liquid-glass-card card-left spotlight-card interactive-press service-scroll-reveal p-7 md:p-8 group cursor-pointer w-full flex flex-col justify-between min-h-[260px] line-reached box-revealed" data-reveal-direction="left" style="width: min(100%, 45%); --mouse-x: 535.0034713745117px; --mouse-y: 60.052001953125px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="service-icon-wrapper w-14 h-14 rounded-2xl border border-white/20 flex items-center justify-center mb-5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] group-hover:border-electric-yellow/50 group-hover:scale-110 transition-all duration-300 bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_12px_rgba(253,224,71,0.5)]" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M5 24.5C9.5 24 20 22.5 27 15.5L25 7C19.5 7.5 10 9 5 13.5V24.5Z" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-linejoin="round" stroke-width="1.75"></path>
+<path d="M8 12.5C12 9.5 19 8.2 24.5 8" opacity="0.7" stroke="currentColor" stroke-dasharray="1.5 1.5" stroke-width="1.2"></path>
+<path d="M7 16C12.5 14.5 19 14 24 17" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M5 24.5L27 24.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M17 3L14 7L16 7.5L13 11.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M22 2.5L20 5.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M12 4L10 6" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M13 11.5L8.5 7M10.5 6.5L8.5 7L9 9" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path>
+<circle cx="24" cy="15" fill="currentColor" r="1"></circle>
+<path d="M20.5 21C22 20 24 18.5 25.5 16.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="mb-2">
+<h3 class="font-headline-md text-headline-md text-white tracking-tight group-hover:text-electric-yellow transition-colors">Tinting</h3>
+</div>
+<p class="font-body-md text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">Advanced ceramic heat rejection films for superior thermal comfort, infrared block, and optical-grade privacy.</p>
+<div class="service-card-footer flex justify-between items-center mt-5 pt-4 border-t border-white/5 w-full">
+<div class="flex flex-wrap items-center gap-2.5 relative z-20">
+<div class="flex items-center gap-1.5" id="tinting-brand-selector">
+<button class="film-brand-chip interactive-press px-3.5 py-1.5 rounded-lg text-sm font-bold tracking-wider uppercase transition-all duration-200 is-active" data-brand="STC" onclick="(function(btn){const p=btn.parentElement;p.querySelectorAll('.film-brand-chip').forEach(c=&gt;c.classList.remove('is-active'));btn.classList.add('is-active');})(this)" type="button">STC</button>
+<button class="film-brand-chip interactive-press px-3.5 py-1.5 rounded-lg text-sm font-bold tracking-wider uppercase transition-all duration-200" data-brand="3M" onclick="(function(btn){const p=btn.parentElement;p.querySelectorAll('.film-brand-chip').forEach(c=&gt;c.classList.remove('is-active'));btn.classList.add('is-active');})(this)" type="button">3M</button>
+<button class="film-brand-chip interactive-press px-3.5 py-1.5 rounded-lg text-sm font-bold tracking-wider uppercase transition-all duration-200" data-brand="Garware" onclick="(function(btn){const p=btn.parentElement;p.querySelectorAll('.film-brand-chip').forEach(c=&gt;c.classList.remove('is-active'));btn.classList.add('is-active');})(this)" type="button">Garware</button>
+</div>
+</div>
+<div class="service-action-btn interactive-press w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm shrink-0">
+<span class="material-symbols-outlined arrow-icon text-base leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 2: Wrapping (Right) -->
+<div class="flex flex-col md:flex-row justify-end w-full relative" data-service-index="1">
+<svg class="curved-branch-svg branch-right-curve hidden md:block is-active" fill="none" preserveAspectRatio="none" style="left: calc(50% - 1.5px); right: 45%; width: calc(5% + 1.5px); opacity: 0;" viewBox="0 0 100 52" xmlns="http://www.w3.org/2000/svg">
+<path class="curved-branch-path" d="M 0 0 C 0 24, 40 52, 100 52" stroke="url(#liquid-branch-right)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.75" style="stroke-dashoffset: 0;"></path>
+</svg>
+<div class="liquid-glass-card card-right spotlight-card interactive-press service-scroll-reveal p-7 md:p-8 group cursor-pointer w-full flex flex-col justify-between min-h-[260px] box-revealed line-reached" data-reveal-direction="right" style="width: min(100%, 45%); --mouse-x: 15.18402099609375px; --mouse-y: 120.95733642578125px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="service-icon-wrapper w-14 h-14 rounded-2xl border border-white/20 flex items-center justify-center mb-5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] group-hover:border-electric-yellow/50 group-hover:scale-110 transition-all duration-300 bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_12px_rgba(253,224,71,0.5)]" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="7" cy="10" fill="currentColor" fill-opacity="0.2" rx="4" ry="5.5" stroke="currentColor" stroke-width="1.75"></ellipse>
+<ellipse cx="7" cy="10" rx="1.75" ry="2.5" stroke="currentColor" stroke-width="1.25"></ellipse>
+<path d="M7 4.5C14 4.5 19 7 22.5 12.5C25.5 17 26.5 22.5 27 27.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.75"></path>
+<path d="M7 15.5C12.5 15.5 17 18 20 23C21.5 25.5 22 27 22.5 28" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M13 11L21 7L24 13L16 17L13 11Z" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M16 17L18.5 22" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M3 28C8 26 18 26 29 28" opacity="0.6" stroke="currentColor" stroke-dasharray="2 2" stroke-linecap="round" stroke-width="1.5"></path>
+</svg>
+</div>
+<div class="mb-2">
+<h3 class="font-headline-md text-headline-md text-white tracking-tight group-hover:text-electric-yellow transition-colors">Wrapping</h3>
+</div>
+<p class="font-body-md text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">Full bespoke color transitions, satin stealth finishes, and architectural vinyl installations with flawless edge tucks.</p>
+<div class="service-card-footer flex justify-end items-center mt-5 pt-4 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm">
+<span class="material-symbols-outlined arrow-icon text-base leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 3: Premium Stickers (Left) -->
+<div class="flex flex-col md:flex-row justify-start w-full relative" data-service-index="2">
+<svg class="curved-branch-svg branch-left-curve hidden md:block is-active" fill="none" preserveAspectRatio="none" style="left: 45%; right: calc(50% - 1.5px); width: calc(5% + 1.5px); opacity: 0.418916;" viewBox="0 0 100 52" xmlns="http://www.w3.org/2000/svg">
+<path class="curved-branch-path" d="M 100 0 C 100 24, 60 52, 0 52" stroke="url(#liquid-branch-left)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.75" style="stroke-dashoffset: 0;"></path>
+</svg>
+<div class="liquid-glass-card card-left spotlight-card interactive-press service-scroll-reveal p-7 md:p-8 group cursor-pointer w-full flex flex-col justify-between min-h-[260px] box-revealed line-reached" data-reveal-direction="left" style="width: min(100%, 45%); --mouse-x: 538.7598285675049px; --mouse-y: 19.71337890625px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="service-icon-wrapper w-14 h-14 rounded-2xl border border-white/20 flex items-center justify-center mb-5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] group-hover:border-electric-yellow/50 group-hover:scale-110 transition-all duration-300 bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_12px_rgba(253,224,71,0.5)]" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M26 17V6C26 4.9 25.1 4 24 4H6C4.9 4 4 4.9 4 6V24C4 25.1 4.9 26 6 26H17" stroke="currentColor" stroke-linecap="round" stroke-width="1.75"></path>
+<path d="M17 26C17 21 21 17 26 17L17 26Z" fill="currentColor" fill-opacity="0.35" stroke="currentColor" stroke-linejoin="round" stroke-width="1.75"></path>
+<path d="M17 26H24C25.1 26 26 25.1 26 24V17" opacity="0.6" stroke="currentColor" stroke-dasharray="1.5 1.5" stroke-width="1.2"></path>
+<path d="M11 9L15 14L11 19" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"></path>
+<path d="M15 14H8" stroke="currentColor" stroke-linecap="round" stroke-width="1.75"></path>
+<path d="M21 7L21.7 8.8L23.5 9.5L21.7 10.2L21 12L20.3 10.2L18.5 9.5L20.3 8.8L21 7Z" fill="currentColor"></path>
+<path d="M9 22L9.4 23L10.5 23.4L9.4 23.8L9 25L8.6 23.8L7.5 23.4L8.6 23L9 22Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="mb-2">
+<h3 class="font-headline-md text-headline-md text-white tracking-tight group-hover:text-electric-yellow transition-colors">Premium Stickers</h3>
+</div>
+<p class="font-body-md text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">Micro-precision vector cutting, holographic reflective accents, and weather-resistant liveries for bespoke branding.</p>
+<div class="service-card-footer flex justify-end items-center mt-5 pt-4 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm">
+<span class="material-symbols-outlined arrow-icon text-base leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 4: Polishing (Right) -->
+<div class="flex flex-col md:flex-row justify-end w-full relative" data-service-index="3">
+<svg class="curved-branch-svg branch-right-curve hidden md:block is-active" fill="none" preserveAspectRatio="none" style="left: calc(50% - 1.5px); right: 45%; width: calc(5% + 1.5px); opacity: 1;" viewBox="0 0 100 52" xmlns="http://www.w3.org/2000/svg">
+<path class="curved-branch-path" d="M 0 0 C 0 24, 40 52, 100 52" stroke="url(#liquid-branch-right)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.75" style="stroke-dashoffset: 0;"></path>
+</svg>
+<div class="liquid-glass-card card-right spotlight-card interactive-press service-scroll-reveal p-7 md:p-8 group cursor-pointer w-full flex flex-col justify-between min-h-[260px] box-revealed line-reached" data-reveal-direction="right" style="width: min(100%, 45%); --mouse-x: 178.18402099609375px; --mouse-y: 4.78125px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="service-icon-wrapper w-14 h-14 rounded-2xl border border-white/20 flex items-center justify-center mb-5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] group-hover:border-electric-yellow/50 group-hover:scale-110 transition-all duration-300 bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_12px_rgba(253,224,71,0.5)]" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 10C4 8.9 4.9 8 6 8H15L19 12V15H4V10Z" fill="currentColor" fill-opacity="0.15" stroke="currentColor" stroke-linejoin="round" stroke-width="1.75"></path>
+<path d="M19 12H25C26.1 12 27 12.9 27 14V15H19V12Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M8 15V17H15V15" stroke="currentColor" stroke-width="1.5"></path>
+<path d="M9 17L10 18H14L15 17" stroke="currentColor" stroke-width="1.25"></path>
+<rect fill="currentColor" fill-opacity="0.35" height="4" rx="1.5" stroke="currentColor" stroke-width="1.75" width="14" x="5" y="19"></rect>
+<path d="M3 27C7 25 17 25 21 27" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+<path d="M25 5L25.8 7.2L28 8L25.8 8.8L25 11L24.2 8.8L22 8L24.2 7.2L25 5Z" fill="currentColor"></path>
+<path d="M27 19L27.5 20.2L29 20.5L27.5 21.2L27 22.5L26.5 21.2L25 20.5L26.5 20.2L27 19Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="mb-2">
+<h3 class="font-headline-md text-headline-md text-white tracking-tight group-hover:text-electric-yellow transition-colors">Polishing</h3>
+</div>
+<p class="font-body-md text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">Multi-stage optical paint correction to eradicate swirls, restoring mirror reflections and crystal-clear clarity.</p>
+<div class="service-card-footer flex justify-end items-center mt-5 pt-4 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm">
+<span class="material-symbols-outlined arrow-icon text-base leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 5: Coating (Left) -->
+<div class="flex flex-col md:flex-row justify-start w-full relative" data-service-index="4">
+<svg class="curved-branch-svg branch-left-curve hidden md:block is-active" fill="none" preserveAspectRatio="none" style="left: 45%; right: calc(50% - 1.5px); width: calc(5% + 1.5px); opacity: 1;" viewBox="0 0 100 52" xmlns="http://www.w3.org/2000/svg">
+<path class="curved-branch-path" d="M 100 0 C 100 24, 60 52, 0 52" stroke="url(#liquid-branch-left)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.75" style="stroke-dashoffset: 0;"></path>
+</svg>
+<div class="liquid-glass-card card-left spotlight-card interactive-press service-scroll-reveal p-7 md:p-8 group cursor-pointer w-full flex flex-col justify-between min-h-[260px] box-revealed line-reached" data-reveal-direction="left" style="width: min(100%, 45%); --mouse-x: 513.4740009307861px; --mouse-y: 93.71328735351562px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="service-icon-wrapper w-14 h-14 rounded-2xl border border-white/20 flex items-center justify-center mb-5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] group-hover:border-electric-yellow/50 group-hover:scale-110 transition-all duration-300 bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_12px_rgba(253,224,71,0.5)]" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 19L14 13L24 18L14 24L4 19Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-linejoin="round" stroke-width="1.75"></path>
+<path d="M4 19V23L14 28V24L4 19Z" fill="currentColor" fill-opacity="0.35" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M24 18V22L14 28V24L24 18Z" fill="currentColor" fill-opacity="0.4" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M24 3H27V6H24V3Z" stroke="currentColor" stroke-width="1.5"></path>
+<path d="M24 6H27L28 9V14H23V9L24 6Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M25.5 14V17" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path>
+<circle cx="25.5" cy="19" fill="currentColor" r="1"></circle>
+<circle cx="14" cy="18" fill="currentColor" r="1.5"></circle>
+<circle cx="10" cy="17" fill="currentColor" r="1"></circle>
+<circle cx="18" cy="16.5" fill="currentColor" r="1"></circle>
+<path d="M6 9L7 11.5L9.5 12L7 13L6 15.5L5 13L2.5 12L5 11.5L6 9Z" fill="currentColor"></path>
+</svg>
+</div>
+<div class="mb-2">
+<h3 class="font-headline-md text-headline-md text-white tracking-tight group-hover:text-electric-yellow transition-colors">Coating</h3>
+</div>
+<p class="font-body-md text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">Industrial-grade 10H ceramic graphene matrices for extreme hydrophobic self-cleaning and environmental shielding.</p>
+<div class="service-card-footer flex justify-end items-center mt-5 pt-4 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm">
+<span class="material-symbols-outlined arrow-icon text-base leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 6: Accessories (Right) -->
+<div class="flex flex-col md:flex-row justify-end w-full relative" data-service-index="5">
+<svg class="curved-branch-svg branch-right-curve hidden md:block" fill="none" preserveAspectRatio="none" style="left: calc(50% - 1.5px); right: 45%; width: calc(5% + 1.5px); opacity: 0;" viewBox="0 0 100 52" xmlns="http://www.w3.org/2000/svg">
+<path class="curved-branch-path" d="M 0 0 C 0 24, 40 52, 100 52" stroke="url(#liquid-branch-right)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.75" style="stroke-dashoffset: 220;"></path>
+</svg>
+<div class="liquid-glass-card card-right spotlight-card interactive-press service-scroll-reveal p-7 md:p-8 group cursor-pointer w-full flex flex-col justify-between min-h-[260px] box-revealed" data-reveal-direction="right" style="width: min(100%, 45%); --mouse-x: 182.6558837890625px; --mouse-y: 112.1805419921875px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="service-icon-wrapper w-14 h-14 rounded-2xl border border-white/20 flex items-center justify-center mb-5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] group-hover:border-electric-yellow/50 group-hover:scale-110 transition-all duration-300 bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_12px_rgba(253,224,71,0.5)]" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M3 11C8 9.5 24 9.5 29 11L27.5 14.5C22.5 13.5 9.5 13.5 4.5 14.5L3 11Z" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-linejoin="round" stroke-width="1.75"></path>
+<path d="M3 9L4.5 17" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M29 9L27.5 17" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M9.5 14L11 23H13.5L12 14" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M22.5 14L21 23H18.5L20 14" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path>
+<path d="M6 25H26" stroke="currentColor" stroke-linecap="round" stroke-width="1.75"></path>
+<path d="M11 6C15 4.5 21 4.5 24 6" opacity="0.6" stroke="currentColor" stroke-dasharray="2 2" stroke-linecap="round" stroke-width="1.25"></path>
+</svg>
+</div>
+<div class="mb-2">
+<h3 class="font-headline-md text-headline-md text-white tracking-tight group-hover:text-electric-yellow transition-colors">Accessories</h3>
+</div>
+<p class="font-body-md text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">Precision fitment of aerodynamic splitters, carbon fiber trims, custom illumination, and performance cockpit upgrades.</p>
+<div class="service-card-footer flex justify-end items-center mt-5 pt-4 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm">
+<span class="material-symbols-outlined arrow-icon text-base leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 7: Hydro Dipping (Left) -->
+<div class="flex flex-col md:flex-row justify-start w-full relative" data-service-index="6">
+<svg class="curved-branch-svg branch-left-curve hidden md:block" fill="none" preserveAspectRatio="none" style="left: 45%; right: calc(50% - 1.5px); width: calc(5% + 1.5px); opacity: 0;" viewBox="0 0 100 52" xmlns="http://www.w3.org/2000/svg">
+<path class="curved-branch-path" d="M 100 0 C 100 24, 60 52, 0 52" stroke="url(#liquid-branch-left)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.75" style="stroke-dashoffset: 220;"></path>
+</svg>
+<div class="liquid-glass-card card-left spotlight-card interactive-press service-scroll-reveal p-7 md:p-8 group cursor-pointer w-full flex flex-col justify-between min-h-[260px] box-revealed" data-reveal-direction="left" style="width: min(100%, 45%); --mouse-x: 511.47533988952637px; --mouse-y: 48.20135498046875px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="service-icon-wrapper w-14 h-14 rounded-2xl border border-white/20 flex items-center justify-center mb-5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] group-hover:border-electric-yellow/50 group-hover:scale-110 transition-all duration-300 bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_12px_rgba(253,224,71,0.5)]" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 11H28V26C28 27.1 27.1 28 26 28H6C4.9 28 4 27.1 4 26V11Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.75"></path>
+<circle cx="16" cy="13" fill="currentColor" fill-opacity="0.2" r="6" stroke="currentColor" stroke-width="1.75"></circle>
+<circle cx="16" cy="13" fill="currentColor" r="2"></circle>
+<path d="M16 3V7M14 5L16 7L18 5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.75"></path>
+<path d="M4 17C6.5 15.5 8.5 15.5 11 17C13.5 18.5 15.5 18.5 18 17C20.5 15.5 22.5 15.5 25 17C26.5 17.8 27.3 17.8 28 17" stroke="currentColor" stroke-linecap="round" stroke-width="1.75"></path>
+<path d="M4 22C6.5 20.8 8.5 20.8 11 22C13.5 23.2 15.5 23.2 18 22C20.5 20.8 22.5 20.8 25 22C26.5 22.6 27.3 22.6 28 22" opacity="0.6" stroke="currentColor" stroke-linecap="round" stroke-width="1.2"></path>
+</svg>
+</div>
+<div class="mb-2">
+<h3 class="font-headline-md text-headline-md text-white tracking-tight group-hover:text-electric-yellow transition-colors">Hydro Dipping</h3>
+</div>
+<p class="font-body-md text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">Submersion printing engineered for complex curved surfaces, geometric carbon weaves, and custom marbling graphics.</p>
+<div class="service-card-footer flex justify-end items-center mt-5 pt-4 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm">
+<span class="material-symbols-outlined arrow-icon text-base leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Card 8: Smart Painting (Right) -->
+<div class="flex flex-col md:flex-row justify-end w-full relative" data-service-index="7">
+<svg class="curved-branch-svg branch-right-curve hidden md:block" fill="none" preserveAspectRatio="none" style="left: calc(50% - 1.5px); right: 45%; width: calc(5% + 1.5px); opacity: 0;" viewBox="0 0 100 52" xmlns="http://www.w3.org/2000/svg">
+<path class="curved-branch-path" d="M 0 0 C 0 24, 40 52, 100 52" stroke="url(#liquid-branch-right)" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.75" style="stroke-dashoffset: 220;"></path>
+</svg>
+<div class="liquid-glass-card card-right spotlight-card interactive-press service-scroll-reveal p-7 md:p-8 group cursor-pointer w-full flex flex-col justify-between min-h-[260px] box-revealed" data-reveal-direction="right" style="width: min(100%, 45%); --mouse-x: 101.18414306640625px; --mouse-y: 269.8647766113281px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="service-icon-wrapper w-14 h-14 rounded-2xl border border-white/20 flex items-center justify-center mb-5 shadow-[inset_0_1px_1px_rgba(255,255,255,0.4)] group-hover:border-electric-yellow/50 group-hover:scale-110 transition-all duration-300 bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_12px_rgba(253,224,71,0.5)]" fill="none" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+<path d="M8 4H14L15 10H7L8 4Z" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-linejoin="round" stroke-width="1.75"></path>
+<path d="M10 10H18L21 13V16L17 17L12 17L10 10Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-linejoin="round" stroke-width="1.75"></path>
+<path d="M12 17L10 27L8 26L9 17" stroke="currentColor" stroke-linejoin="round" stroke-width="1.75"></path>
+<path d="M14 17L15 22" stroke="currentColor" stroke-linecap="round" stroke-width="1.75"></path>
+<path d="M21 14.5H23.5" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M25 13L29 11M25.5 14.5H30M25 16L29 18" stroke="currentColor" stroke-dasharray="1.5 2" stroke-linecap="round" stroke-width="1.5"></path>
+<circle cx="27" cy="12.5" fill="currentColor" r="0.75"></circle>
+<circle cx="28.5" cy="14.5" fill="currentColor" r="0.75"></circle>
+<circle cx="27" cy="16.5" fill="currentColor" r="0.75"></circle>
+</svg>
+</div>
+<div class="mb-2">
+<h3 class="font-headline-md text-headline-md text-white tracking-tight group-hover:text-electric-yellow transition-colors">Smart Painting</h3>
+</div>
+<p class="font-body-md text-sm text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors">Computer-calibrated spectrophotometer color matching and localized spot blends for undetectable factory finish restoration.</p>
+<div class="service-card-footer flex justify-end items-center mt-5 pt-4 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-10 h-10 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm">
+<span class="material-symbols-outlined arrow-icon text-base leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Liquid Glass Floating Footer -->
+<footer class="relative w-full py-16 mt-20 border-t border-white/10 z-10 bg-[#030304]/90 backdrop-blur-2xl transition-all duration-700" id="footer-section">
+<div id="footer-wash-layer"></div>
+<div class="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto">
+<!-- Col 1: Brand & Bio -->
+<div class="bottom-reveal-block flex flex-col items-start gap-4 active is-visible" style="transition-delay: 0.05s;">
+<div class="flex items-center gap-3">
+<img alt="JETHRI AUTO CARE" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx1pPxINP938jLG0W8F5M0HiAAGWuj_RrG13hwfXc4FR3bvcsreVs9wNoOXhPU2G7lLvd_siXDGd6xrLKPKhJkFHaTNtKzAvm17pYv3FMXOEDHpMmGwiP0d_FDCEQHqv3QzDJLzvVVVtWaDnMbFiaslXOpOAw4ZjVpIEaqzXYuYcBNrXRKS65d6893enKm4jlnlxqHQb-G5m_7Q0LG4QM0nGEodEFIrXIOHETkm_WUm7VSKkMDPudNWIQ7rPZyCpNMCw">
+<span class="font-display-lg text-headline-md text-white font-bold">AUTO CARE</span>
+</div>
+<p class="font-body-md text-sm text-slate-400 max-w-sm leading-relaxed">Precision engineered detailing and aesthetic modification for the discerning enthusiast.</p>
+</div>
+<!-- Col 2: Connect & Visit Cards -->
+<div class="bottom-reveal-block flex flex-col gap-4 active is-visible" style="transition-delay: 0.15s;">
+<h4 class="font-label-mono text-label-mono text-electric-yellow uppercase tracking-widest text-xs font-semibold flex items-center gap-2">
+<span class="">Connect &amp; Visit</span>
+<span class="w-1.5 h-1.5 rounded-full bg-electric-yellow/80 inline-block shadow-[0_0_8px_rgba(253,224,71,0.8)]"></span>
+</h4>
+<div class="flex flex-col gap-3 font-body-md text-sm mt-1">
+<a class="group flex items-center gap-3 text-slate-400 hover:text-white transition-colors duration-200" href="tel:+18005553288">
+<div class="bottom-interactive-card w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-electric-yellow group-hover:border-electric-yellow/50 group-hover:bg-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] transition-all duration-200 shrink-0">
+<span class="material-symbols-outlined text-[16px] leading-none">call</span>
+</div>
+<div class="flex flex-col leading-tight">
+<span class="text-[11px] font-label-mono text-slate-500 uppercase tracking-wider">Direct Line</span>
+<span class="text-xs font-semibold text-slate-300 group-hover:text-electric-yellow transition-colors">+1 (800) 555-J3CARE</span>
+</div>
+</a>
+<a class="group flex items-center gap-3 text-slate-400 hover:text-white transition-colors duration-200" href="mailto:concierge@j3autocare.com">
+<div class="bottom-interactive-card w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-electric-yellow group-hover:border-electric-yellow/50 group-hover:bg-white/10 shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] transition-all duration-200 shrink-0">
+<span class="material-symbols-outlined text-[16px] leading-none">alternate_email</span>
+</div>
+<div class="flex flex-col leading-tight">
+<span class="text-[11px] font-label-mono text-slate-500 uppercase tracking-wider">Inquiries</span>
+<span class="text-xs font-semibold text-slate-300 group-hover:text-electric-yellow transition-colors">concierge@j3autocare.com</span>
+</div>
+</a>
+<div class="group flex items-start gap-3 text-slate-400">
+<div class="bottom-interactive-card w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-electric-yellow shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] transition-all duration-200 shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[16px] leading-none">location_on</span>
+</div>
+<div class="flex flex-col leading-tight">
+<span class="text-[11px] font-label-mono text-slate-500 uppercase tracking-wider">Aero Studio &amp; Bay</span>
+<span class="text-xs text-slate-300">4800 Apex Motorsports Way, Bay 4</span>
+</div>
+</div>
+<div class="group flex items-center gap-3 text-slate-400">
+<div class="bottom-interactive-card w-8 h-8 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-electric-yellow shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] transition-all duration-200 shrink-0">
+<span class="material-symbols-outlined text-[16px] leading-none">schedule</span>
+</div>
+<div class="flex flex-col leading-tight">
+
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded-full bg-emerald-500/15 border border-emerald-400/30 w-fit mt-0.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400 shadow-[0_0_6px_#34d399]"></span>
+
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<!-- Col 3: Click to Connect buttons -->
+<div class="bottom-reveal-block flex flex-col gap-4 md:items-end md:text-right active is-visible" style="transition-delay: 0.25s;">
+<h4 class="font-label-mono text-label-mono text-electric-yellow uppercase tracking-widest text-xs font-semibold md:text-right flex items-center md:justify-end gap-2">
+<span class="">Click to Connect</span>
+<span class="w-1.5 h-1.5 rounded-full bg-electric-yellow/80 inline-block shadow-[0_0_8px_rgba(253,224,71,0.8)]"></span>
+</h4>
+<div class="flex flex-wrap items-center md:justify-end mt-1 gap-3">
+<!-- Phone / Call -->
+<a aria-label="Call J3 Auto Care" class="interactive-press bottom-interactive-card group relative flex items-center justify-center gap-2 w-[136px] h-10 px-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.09] border border-white/10 hover:border-electric-yellow/50 text-slate-300 hover:text-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_18px_rgba(253,224,71,0.22)] backdrop-blur-md" href="tel:+18005553288" title="Contact Phone">
+<span class="material-symbols-outlined text-[18px] text-electric-yellow leading-none group-hover:scale-110 transition-transform shrink-0">call</span>
+<span class="text-xs font-semibold text-slate-200 group-hover:text-white tracking-wide transition-colors">Call</span>
+</a>
+<!-- WhatsApp -->
+<a aria-label="WhatsApp VIP Concierge" class="interactive-press bottom-interactive-card group relative flex items-center justify-center gap-2 w-[136px] h-10 px-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.09] border border-white/10 hover:border-electric-yellow/50 text-slate-300 hover:text-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_18px_rgba(253,224,71,0.22)] backdrop-blur-md" href="https://wa.me/18005553288" target="_blank" title="WhatsApp Concierge">
+<span class="material-symbols-outlined text-[18px] text-electric-yellow leading-none group-hover:scale-110 transition-transform shrink-0">chat</span>
+<span class="text-xs font-semibold text-slate-200 group-hover:text-white tracking-wide transition-colors">WhatsApp</span>
+</a>
+<!-- Instagram -->
+<a aria-label="Instagram" class="interactive-press bottom-interactive-card group relative flex items-center justify-center gap-2 w-[136px] h-10 px-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.09] border border-white/10 hover:border-electric-yellow/50 text-slate-300 hover:text-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_18px_rgba(253,224,71,0.22)] backdrop-blur-md" href="https://instagram.com" target="_blank" title="Instagram">
+<svg class="w-[18px] h-[18px] text-electric-yellow group-hover:scale-110 transition-transform shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg>
+<span class="text-xs font-semibold text-slate-200 group-hover:text-white tracking-wide transition-colors">Instagram</span>
+</a>
+<!-- Facebook -->
+<a aria-label="Facebook" class="interactive-press bottom-interactive-card group relative flex items-center justify-center gap-2 w-[136px] h-10 px-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.09] border border-white/10 hover:border-electric-yellow/50 text-slate-300 hover:text-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_18px_rgba(253,224,71,0.22)] backdrop-blur-md" href="https://facebook.com" target="_blank" title="Facebook">
+<svg class="w-[18px] h-[18px] text-electric-yellow group-hover:scale-110 transition-transform shrink-0" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg>
+<span class="text-xs font-semibold text-slate-200 group-hover:text-white tracking-wide transition-colors">Facebook</span>
+</a>
+<!-- Location / Map Pin -->
+<a aria-label="Location Map" class="interactive-press bottom-interactive-card group relative flex items-center justify-center gap-2 w-[136px] h-10 px-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.09] border border-white/10 hover:border-electric-yellow/50 text-slate-300 hover:text-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_18px_rgba(253,224,71,0.22)] backdrop-blur-md" href="https://maps.google.com/?q=4800+Apex+Motorsports+Way" target="_blank" title="Location Bay">
+<span class="material-symbols-outlined text-[18px] text-electric-yellow leading-none group-hover:scale-110 transition-transform shrink-0">location_on</span>
+<span class="text-xs font-semibold text-slate-200 group-hover:text-white tracking-wide transition-colors">Location</span>
+</a>
+<!-- Gmail -->
+<a aria-label="Email J3 Auto Care via Gmail" class="interactive-press bottom-interactive-card group relative flex items-center justify-center gap-2 w-[136px] h-10 px-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.09] border border-white/10 hover:border-electric-yellow/50 text-slate-300 hover:text-white shadow-[inset_0_1px_1px_rgba(255,255,255,0.2)] transition-all duration-300 hover:scale-105 hover:shadow-[0_0_18px_rgba(253,224,71,0.22)] backdrop-blur-md" href="mailto:concierge@j3autocare.com" target="_blank" title="Gmail VIP Inquiries">
+<span class="material-symbols-outlined text-[18px] text-electric-yellow leading-none group-hover:scale-110 transition-transform shrink-0">mail</span>
+<span class="text-xs font-semibold text-slate-200 group-hover:text-white tracking-wide transition-colors">Gmail</span>
+</a>
+</div>
+<div class="flex flex-col gap-2 font-body-md text-xs md:text-right mt-3 text-slate-400">
+<a class="hover:text-electric-yellow transition-colors duration-200" href="#">Privacy Policy &amp; Security</a>
+<a class="hover:text-electric-yellow transition-colors duration-200" href="#">Service Guarantee &amp; Warranty</a>
+</div>
+</div>
+</div>
+<div class="bottom-reveal-block relative z-10 mt-12 pt-8 border-t border-white/5 px-margin-mobile md:px-margin-desktop max-w-[1440px] mx-auto text-center md:text-left flex flex-col sm:flex-row items-center justify-between gap-4 active is-visible" style="transition-delay: 0.35s;">
+<p class="font-label-caps text-[11px] text-slate-500 uppercase tracking-widest">
+      © 2024 J3 AUTO CARE. PRECISION ENGINEERED DETAILING.
+    </p>
+
+</div>
+</footer>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Individual Card Mouse Spotlight Tracking
+        const spotlightCards = document.querySelectorAll('.spotlight-card');
+        spotlightCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Tactile Smooth Micro-Press Ripple & Radial Glow
+        function createSmoothRipple(target, clientX, clientY) {
+            let container = target.querySelector(':scope > .liquid-ripple-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.className = 'liquid-ripple-container';
+                target.appendChild(container);
+            }
+
+            const rect = target.getBoundingClientRect();
+            const posX = (clientX !== undefined && clientX !== null) ? (clientX - rect.left) : (rect.width / 2);
+            const posY = (clientY !== undefined && clientY !== null) ? (clientY - rect.top) : (rect.height / 2);
+            const diameter = Math.max(rect.width, rect.height) * 1.6;
+
+            const ripple = document.createElement('span');
+            ripple.className = 'ripple-wave';
+            ripple.style.width = `${diameter}px`;
+            ripple.style.height = `${diameter}px`;
+            ripple.style.left = `${posX}px`;
+            ripple.style.top = `${posY}px`;
+
+            container.appendChild(ripple);
+
+            ripple.addEventListener('animationend', () => {
+                ripple.remove();
+                if (container.children.length === 0) {
+                    container.remove();
+                }
+            });
+        }
+
+        const interactiveButtons = document.querySelectorAll(
+            '.interactive-press, .liquid-btn-primary, .liquid-btn-glass, .film-brand-chip, .service-action-btn'
+        );
+
+        interactiveButtons.forEach(elem => {
+            elem.addEventListener('pointerdown', (e) => {
+                createSmoothRipple(elem, e.clientX, e.clientY);
+            });
+        });
+
+        // Header & Bottom Reveal Observers
+        const revealObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active', 'is-visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { root: null, rootMargin: '0px 0px -40px 0px', threshold: 0.12 });
+
+        document.querySelectorAll('.reveal-up, .bottom-reveal-block').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // --- DYNAMIC BIDIRECTIONAL TIMELINE, BRANCHES & FROSTED SERVICE REVEALS ---
+        const scrollLine = document.getElementById('electric-scroll-line');
+        const flowContainer = document.getElementById('services-flow-container');
+        const cardRows = Array.from(document.querySelectorAll('[data-service-index]'));
+        const footerSection = document.getElementById('footer-section');
+
+        let targetLineHeight = 0;
+        let currentLineHeight = 0;
+        let isTicking = false;
+
+        function updateTimelineAndBoxes() {
+            if (!flowContainer || !scrollLine) return;
+
+            const containerRect = flowContainer.getBoundingClientRect();
+            const totalFlowHeight = flowContainer.offsetHeight;
+
+            // Trigger point positioned at 65% of the viewport height for natural reading
+            const viewportTrigger = window.innerHeight * 0.65;
+            const scrollProgress = viewportTrigger - containerRect.top;
+
+            // Smooth bidirectional target calculation
+            targetLineHeight = Math.max(0, Math.min(scrollProgress, totalFlowHeight));
+
+            // Smooth interpolation lerp
+            currentLineHeight += (targetLineHeight - currentLineHeight) * 0.18;
+            if (Math.abs(targetLineHeight - currentLineHeight) < 0.2) {
+                currentLineHeight = targetLineHeight;
+            }
+
+            scrollLine.style.height = `${currentLineHeight}px`;
+
+            // Evaluate branches and service boxes based on current animated line position
+            cardRows.forEach((row) => {
+                const card = row.querySelector('.liquid-glass-card');
+                const branchSvg = row.querySelector('.curved-branch-svg');
+                const path = branchSvg ? branchSvg.querySelector('.curved-branch-path') : null;
+
+                // Center vertical junction of this row relative to flow container
+                const junctionY = row.offsetTop + (row.offsetHeight / 2);
+                const reachDiff = currentLineHeight - junctionY;
+                const cardRect = card.getBoundingClientRect();
+
+                // 1. Service Box Frosted Blur Entrance: enters viewport softly
+                if (cardRect.top <= window.innerHeight * 0.88) {
+                    card.classList.add('box-revealed');
+                } else if (cardRect.top > window.innerHeight * 0.98) {
+                    // Softly blur again if scrolled far back up
+                    card.classList.remove('box-revealed');
+                }
+
+                // 2. Curved Branch Connector & Line-Reached Glow:
+                const branchZone = 140; // window in px before junction where branch starts extending
+                if (reachDiff >= 0) {
+                    // Branch completely connected to the box
+                    if (branchSvg) branchSvg.classList.add('is-active');
+                    if (path) path.style.strokeDashoffset = '0';
+                    if (card) {
+                        card.classList.add('line-reached');
+                    }
+                } else if (reachDiff > -branchZone) {
+                    // Smooth bidirectional branch extension outward toward the box edge
+                    const branchProgress = (reachDiff + branchZone) / branchZone;
+                    if (branchSvg) {
+                        branchSvg.classList.add('is-active');
+                        branchSvg.style.opacity = Math.min(1, branchProgress * 1.3);
+                    }
+                    if (path) {
+                        const maxDash = 220;
+                        path.style.strokeDashoffset = `${maxDash * (1 - branchProgress)}`;
+                    }
+                    if (branchProgress > 0.65 && card) {
+                        card.classList.add('line-reached');
+                    } else if (card) {
+                        card.classList.remove('line-reached');
+                    }
+                } else {
+                    // Center line has not reached this branch yet
+                    if (branchSvg) {
+                        branchSvg.classList.remove('is-active');
+                        branchSvg.style.opacity = '0';
+                    }
+                    if (path) path.style.strokeDashoffset = '220';
+                    if (card) {
+                        card.classList.remove('line-reached');
+                    }
+                }
+            });
+
+            // Footer Illumination
+            if (footerSection) {
+                const footerRect = footerSection.getBoundingClientRect();
+                const isNearFooter = currentLineHeight >= (totalFlowHeight - 20) || footerRect.top <= window.innerHeight * 0.82;
+                if (isNearFooter) {
+                    footerSection.classList.add('footer-illuminated');
+                    document.querySelectorAll('.bottom-reveal-block').forEach(b => b.classList.add('is-visible'));
+                } else {
+                    footerSection.classList.remove('footer-illuminated');
+                }
+            }
+
+            // Continue animation frame if not yet converged
+            if (Math.abs(targetLineHeight - currentLineHeight) > 0.2) {
+                requestAnimationFrame(updateTimelineAndBoxes);
+            } else {
+                isTicking = false;
+            }
+        }
+
+        function triggerSyncUpdate() {
+            if (!isTicking) {
+                isTicking = true;
+                requestAnimationFrame(updateTimelineAndBoxes);
+            }
+        }
+
+        window.addEventListener('scroll', triggerSyncUpdate, { passive: true });
+        window.addEventListener('resize', triggerSyncUpdate, { passive: true });
+
+        // Initial trigger
+        triggerSyncUpdate();
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>

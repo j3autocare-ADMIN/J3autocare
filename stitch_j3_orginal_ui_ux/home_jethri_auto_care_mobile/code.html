@@ -1,0 +1,963 @@
+﻿<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>JETHRI AUTO CARE - Premium Automotive Customization</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error": "#ffb4ab",
+                        "on-primary": "#393000",
+                        "primary-fixed-dim": "#e2c62d",
+                        "on-tertiary": "#313030",
+                        "surface-container": "#222016",
+                        "outline": "#97917a",
+                        "surface": "#16130a",
+                        "tertiary-fixed": "#e5e2e1",
+                        "tertiary-container": "#e3e0df",
+                        "inverse-on-surface": "#333026",
+                        "charcoal-surface": "#1A1A1A",
+                        "on-secondary-fixed": "#1c1b1b",
+                        "surface-container-lowest": "#100e06",
+                        "background": "#050507",
+                        "surface-variant": "#38352a",
+                        "tertiary": "#f9feff",
+                        "electric-yellow": "#FDE047",
+                        "secondary-container": "#474646",
+                        "primary-fixed": "#ffe24c",
+                        "surface-container-low": "#1e1c12",
+                        "on-secondary": "#313030",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "glass-border": "rgba(255, 255, 255, 0.12)",
+                        "on-error": "#690005",
+                        "secondary-fixed-dim": "#c9c6c5",
+                        "on-primary-fixed-variant": "#524600",
+                        "surface-container-high": "#2d2a1f",
+                        "on-background": "#e9e2d2",
+                        "surface-bright": "#3c392e",
+                        "secondary": "#c9c6c5",
+                        "on-surface": "#f1f5f9",
+                        "inverse-surface": "#e9e2d2",
+                        "on-primary-container": "#726300",
+                        "surface-dim": "#0a0a0c",
+                        "primary": "#ffffff",
+                        "on-primary-fixed": "#211b00",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "inverse-primary": "#6d5e00",
+                        "void-black": "#030305",
+                        "text-dim": "#94a3b8",
+                        "secondary-fixed": "#e5e2e1",
+                        "error-container": "#93000a",
+                        "on-tertiary-container": "#646363",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "outline-variant": "#4b4734",
+                        "on-error-container": "#ffdad6",
+                        "on-surface-variant": "#cbd5e1",
+                        "surface-container-highest": "#38352a",
+                        "on-secondary-container": "#b7b4b4",
+                        "surface-tint": "#e2c62d",
+                        "primary-container": "#fde047",
+                        "on-secondary-fixed-variant": "#474646"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.75rem",
+                        "xl": "1rem",
+                        "2xl": "1.5rem",
+                        "3xl": "2rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "base": "8px",
+                        "margin-desktop": "64px",
+                        "section-gap": "128px"
+                    },
+                    "fontFamily": {
+                        "headline-xl-mobile": ["Inter", "sans-serif"],
+                        "body-md": ["Inter", "sans-serif"],
+                        "display-lg": ["Inter", "sans-serif"],
+                        "label-caps": ["Inter", "sans-serif"],
+                        "headline-xl": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"],
+                        "label-mono": ["JetBrains Mono", "monospace"],
+                        "body-lg": ["Inter", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "headline-xl-mobile": ["32px", { "lineHeight": "1.2", "fontWeight": "700" }],
+                        "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "display-lg": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "800" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.2em", "fontWeight": "700" }],
+                        "headline-xl": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["22px", { "lineHeight": "1.35", "fontWeight": "600" }],
+                        "label-mono": ["13px", { "lineHeight": "1.2", "letterSpacing": "0.1em", "fontWeight": "500" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }]
+                    }
+                },
+            }
+        }
+    </script>
+<style>
+        body {
+            background-color: #030304;
+            color: #e2e8f0;
+            overflow-x: hidden;
+            selection-background-color: #fde047;
+            selection-color: #000;
+        }
+
+        /* Custom scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #030304;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 9999px;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.35);
+        }
+
+        /* Apple iOS Liquid Glass Specification */
+        .liquid-glass-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.02) 100%), rgba(18, 18, 24, 0.65) !important;
+            backdrop-filter: blur(28px) saturate(190%) !important;
+            -webkit-backdrop-filter: blur(28px) saturate(190%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.14) !important;
+            border-radius: 1.75rem;
+            box-shadow: inset 0 1px 1px 0 rgba(255, 255, 255, 0.22), inset 0 -1px 1px 0 rgba(0, 0, 0, 0.4), 0 20px 40px -15px rgba(0, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            will-change: transform, opacity, filter, box-shadow;
+            transition: transform 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                        opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                        filter 0.7s cubic-bezier(0.16, 1, 0.3, 1),
+                        border-color 0.5s ease,
+                        box-shadow 0.5s ease;
+        }
+
+        /* Directional Soft Gradient Illumination Layer for Reached Cards */
+        .card-directional-glow {
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            pointer-events: none;
+            opacity: 0;
+            transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 1;
+            display: block;
+        }
+
+        /* Top Specular Glare Arc */
+        .liquid-glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 38%;
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0) 100%);
+            pointer-events: none;
+            border-top-left-radius: inherit;
+            border-top-right-radius: inherit;
+            z-index: 2;
+        }
+
+        /* Dynamic Spotlight Cursor Highlight */
+        .spotlight-card::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: inherit;
+            background: radial-gradient(
+                380px circle at var(--mouse-x, 50%) var(--mouse-y, 50%),
+                rgba(255, 255, 255, 0.18) 0%,
+                rgba(255, 255, 255, 0.06) 45%,
+                transparent 72%
+            );
+            opacity: 0;
+            transition: opacity 0.35s ease;
+            pointer-events: none;
+            z-index: 3;
+        }
+        .spotlight-card:hover::after {
+            opacity: 1;
+        }
+
+        /* Refined Tactile Micro-Press & Elegant Radial Glow */
+        .interactive-press {
+            position: relative;
+            overflow: hidden;
+            user-select: none;
+            transition: transform 0.28s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.28s ease, filter 0.28s ease;
+        }
+        .interactive-press:hover {
+            box-shadow: 0 0 16px rgba(253, 224, 71, 0.16);
+        }
+        .interactive-press:active {
+            transform: scale(0.982);
+            filter: brightness(1.08);
+        }
+
+        .liquid-ripple-container {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            overflow: hidden;
+            border-radius: inherit;
+            z-index: 30;
+        }
+
+        .ripple-wave {
+            position: absolute;
+            border-radius: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            pointer-events: none;
+            animation: elegant-ripple 0.65s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+            background: radial-gradient(circle, rgba(253, 224, 71, 0.45) 0%, rgba(255, 255, 255, 0.3) 25%, rgba(253, 224, 71, 0.12) 55%, transparent 75%);
+            filter: drop-shadow(0 0 12px rgba(253, 224, 71, 0.5));
+        }
+
+        @keyframes elegant-ripple {
+            0% {
+                transform: translate(-50%, -50%) scale(0);
+                opacity: 0.85;
+            }
+            50% {
+                opacity: 0.45;
+            }
+            100% {
+                transform: translate(-50%, -50%) scale(2.2);
+                opacity: 0;
+            }
+        }
+
+        /* General scroll reveals */
+        .reveal-up {
+            opacity: 0;
+            transform: translateY(28px);
+            filter: blur(14px);
+            will-change: opacity, transform, filter;
+            transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                        filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .reveal-up.active, .reveal-up.is-visible {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+            filter: blur(0px) !important;
+        }
+
+        /* Service Box Smooth Upcoming Reveal Animation */
+        .service-scroll-reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            filter: blur(4px);
+            will-change: opacity, transform, filter, box-shadow, border-color;
+            transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
+                        transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), 
+                        filter 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                        border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1),
+                        box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .service-scroll-reveal.box-revealed {
+            opacity: 1 !important;
+            filter: blur(0px) !important;
+            transform: translateY(0) !important;
+        }
+
+        /* Card Lateral Border Highlights */
+        .liquid-glass-card.card-left {
+            border-right: 1px solid rgba(253, 224, 71, 0.2) !important;
+        }
+        .liquid-glass-card.card-left .card-directional-glow {
+            background: linear-gradient(270deg, rgba(253, 224, 71, 0.14) 0%, transparent 28%) !important;
+        }
+        .card-left.line-reached {
+            border: 1px solid rgba(255, 255, 255, 0.22) !important;
+            border-right: 2px solid rgba(253, 224, 71, 0.95) !important;
+            box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.3), inset -2px 0 18px rgba(253, 224, 71, 0.24), 0 20px 44px rgba(0, 0, 0, 0.75), 6px 0 20px -2px rgba(253, 224, 71, 0.38) !important;
+        }
+        .card-left.line-reached .card-directional-glow {
+            opacity: 1 !important;
+        }
+        .liquid-glass-card.card-left:hover {
+            transform: translateY(-5px) scale(1.02) !important;
+            border-right: 2px solid #fde047 !important;
+            box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.35), 0 28px 56px rgba(0, 0, 0, 0.82), 10px 0 28px -2px rgba(253, 224, 71, 0.5) !important;
+        }
+
+        .liquid-glass-card.card-right {
+            border-left: 1px solid rgba(253, 224, 71, 0.2) !important;
+        }
+        .liquid-glass-card.card-right .card-directional-glow {
+            background: linear-gradient(90deg, rgba(253, 224, 71, 0.14) 0%, transparent 28%) !important;
+        }
+        .card-right.line-reached {
+            border: 1px solid rgba(255, 255, 255, 0.22) !important;
+            border-left: 2px solid rgba(253, 224, 71, 0.95) !important;
+            box-shadow: inset 0 1px 1.5px 0 rgba(255, 255, 255, 0.3), inset 2px 0 18px rgba(253, 224, 71, 0.24), 0 20px 44px rgba(0, 0, 0, 0.75), -6px 0 20px -2px rgba(253, 224, 71, 0.38) !important;
+        }
+        .card-right.line-reached .card-directional-glow {
+            opacity: 1 !important;
+        }
+        .liquid-glass-card.card-right:hover {
+            transform: translateY(-5px) scale(1.02) !important;
+            border-left: 2px solid #fde047 !important;
+            box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.35), 0 28px 56px rgba(0, 0, 0, 0.82), -10px 0 28px -2px rgba(253, 224, 71, 0.5) !important;
+        }
+
+        /* Buttons */
+        .liquid-btn-primary {
+            background: linear-gradient(180deg, rgba(253, 224, 71, 0.95) 0%, rgba(234, 179, 8, 0.85) 100%) !important;
+            backdrop-filter: blur(16px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(16px) saturate(180%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.35) !important;
+            box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.7), 0 6px 20px rgba(250, 204, 21, 0.25) !important;
+            color: #0a0a0c !important;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+        .liquid-btn-primary:hover {
+            transform: translateY(-2px) scale(1.025) !important;
+            box-shadow: inset 0 1.5px 2px rgba(255, 255, 255, 0.9), 0 12px 32px rgba(250, 204, 21, 0.45), 0 0 22px rgba(253, 224, 71, 0.4) !important;
+        }
+        .liquid-btn-glass {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%), rgba(22, 22, 28, 0.6) !important;
+            backdrop-filter: blur(20px) saturate(180%) !important;
+            -webkit-backdrop-filter: blur(20px) saturate(180%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.18) !important;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 4px 14px rgba(0, 0, 0, 0.35) !important;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+        .liquid-btn-glass:hover {
+            transform: translateY(-2px) scale(1.025) !important;
+            border-color: rgba(255, 255, 255, 0.4) !important;
+            box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.5), 0 10px 28px rgba(0, 0, 0, 0.5), 0 0 18px rgba(255, 255, 255, 0.18) !important;
+        }
+
+        .service-action-btn {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.03) 100%), rgba(24, 24, 30, 0.5) !important;
+            backdrop-filter: blur(16px) saturate(160%) !important;
+            -webkit-backdrop-filter: blur(16px) saturate(160%) !important;
+            border: 1px solid rgba(255, 255, 255, 0.22) !important;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.35), 0 4px 12px rgba(0, 0, 0, 0.4) !important;
+            transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1) !important;
+            position: relative;
+            overflow: hidden;
+        }
+        .service-action-btn .arrow-icon {
+            transition: color 0.3s ease, transform 0.3s ease !important;
+        }
+        .group:hover .service-action-btn,
+        .spotlight-card:hover .service-action-btn {
+            background: linear-gradient(180deg, rgba(253, 224, 71, 0.95) 0%, rgba(234, 179, 8, 0.9) 100%) !important;
+            border-color: rgba(255, 255, 255, 0.4) !important;
+            box-shadow: inset 0 1px 1.5px rgba(255, 255, 255, 0.8), 0 0 24px rgba(253, 224, 71, 0.75) !important;
+            transform: scale(1.08) translateX(2px) !important;
+        }
+        .group:hover .service-action-btn .arrow-icon,
+        .spotlight-card:hover .service-action-btn .arrow-icon {
+            color: #000000 !important;
+            transform: translateX(1.5px);
+        }
+
+        /* Bottom Details Section */
+        .bottom-reveal-block {
+            opacity: 0;
+            transform: translateY(28px);
+            filter: blur(14px);
+            will-change: opacity, transform, filter;
+            transition: opacity 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                        transform 0.85s cubic-bezier(0.16, 1, 0.3, 1),
+                        filter 0.85s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .bottom-reveal-block.is-visible {
+            opacity: 1 !important;
+            filter: blur(0px) !important;
+            transform: translateY(0) !important;
+        }
+
+        #footer-section {
+            transition: border-color 0.8s ease, box-shadow 0.8s ease, background 0.8s ease;
+        }
+        #footer-section.footer-illuminated {
+            border-color: rgba(253, 224, 71, 0.4) !important;
+            box-shadow: 0 -15px 50px -10px rgba(253, 224, 71, 0.16), inset 0 2px 10px rgba(253, 224, 71, 0.22) !important;
+        }
+
+        #footer-wash-layer {
+            position: absolute;
+            inset: 0;
+            pointer-events: none;
+            background: radial-gradient(800px circle at 50% 0%, rgba(253, 224, 71, 0.12) 0%, rgba(253, 224, 71, 0.03) 45%, transparent 70%);
+            opacity: 0;
+            transition: opacity 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+            z-index: 1;
+        }
+        #footer-section.footer-illuminated #footer-wash-layer {
+            opacity: 1;
+        }
+
+        .bottom-interactive-card {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.5s ease, box-shadow 0.5s ease;
+        }
+        #footer-section.footer-illuminated .bottom-interactive-card {
+            border-color: rgba(253, 224, 71, 0.22);
+            box-shadow: 0 4px 18px rgba(0, 0, 0, 0.5), inset 0 1px 1px rgba(255, 255, 255, 0.25);
+        }
+
+        /* Film Manufacturer Selectable Glass Chips */
+        .film-brand-chip {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #94a3b8;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            transition: all 0.26s cubic-bezier(0.16, 1, 0.3, 1);
+            user-select: none;
+            cursor: pointer;
+        }
+        .film-brand-chip:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.25);
+            transform: translateY(-1px);
+        }
+        .film-brand-chip.is-active {
+            background: linear-gradient(180deg, rgba(253, 224, 71, 0.18) 0%, rgba(234, 179, 8, 0.08) 100%);
+            border: 1px solid rgba(253, 224, 71, 0.7);
+            color: #fde047;
+            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 0 14px rgba(253, 224, 71, 0.3);
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .service-scroll-reveal {
+                opacity: 0;
+                transform: translateY(28px);
+                filter: blur(4px);
+            }
+            .service-scroll-reveal.box-revealed {
+                opacity: 1 !important;
+                filter: blur(0px) !important;
+                transform: translateY(0) !important;
+            }
+        }
+</style>
+</head>
+<body class="antialiased min-h-screen flex flex-col font-body-md text-body-md relative overflow-x-hidden bg-[#030304]">
+<svg aria-hidden="true" class="inline-defs-container" style="position:absolute;width:0;height:0;overflow:hidden">
+<defs>
+<linearGradient id="liquid-branch-left" x1="1" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#fde047" stop-opacity="1"></stop>
+<stop offset="35%" stop-color="#fde047" stop-opacity="0.95"></stop>
+<stop offset="75%" stop-color="#fde047" stop-opacity="0.85"></stop>
+<stop offset="100%" stop-color="#fde047" stop-opacity="1"></stop>
+</linearGradient>
+<linearGradient id="liquid-branch-right" x1="0" x2="1" y1="0" y2="1">
+<stop offset="0%" stop-color="#fde047" stop-opacity="1"></stop>
+<stop offset="35%" stop-color="#fde047" stop-opacity="0.95"></stop>
+<stop offset="75%" stop-color="#fde047" stop-opacity="0.85"></stop>
+<stop offset="100%" stop-color="#fde047" stop-opacity="1"></stop>
+</linearGradient>
+</defs>
+</svg>
+<!-- Floating iOS Liquid Glass TopNavBar Capsule -->
+<nav class="fixed top-0 left-0 right-0 w-full z-50 bg-[#07070a]/75 backdrop-blur-2xl border-b border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.5)] transition-all duration-300"><div class="max-w-7xl mx-auto px-3.5 py-2.5 flex items-center justify-between"><div class="flex group cursor-pointer interactive-press rounded-full py-0.5 px-1 items-end gap-0.5">
+<img alt="JETHRI AUTO CARE Logo" class="h-4 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAWwgR-Sz5pP_DreYE4ugH_CdBGDdM9HS5IFrRMQ0ZAAVlEc1X7-Lmg4eY1Nhm2yKG8DjwTSOKk_dH1RJI_zKTYJSdGQBQRTjQV9zW26kxceR_TAVcarjVHBr3uA_9m_BDfse4THrV1QL3LBFFYB9Z2RZTPGSoDP_qsmq1BTNbFi6se3g-Ukqzql7PwQdhBAOZf2c60-LlvKFnUxQ4ZMv3z6pP1f90B0-VD8ebTqakfri424MdvBK_EA9YEGiy-GlZt_g">
+<span class="font-display-lg text-[8.5px] tracking-wider text-white font-bold leading-none">AUTO CARE</span>
+</div>
+
+<div class="flex items-center gap-1.5">
+<a aria-label="Login" class="interactive-press inline-flex items-center justify-center w-6 h-6 rounded-full border border-white/15 bg-white/5 text-white shadow-sm" href="#login">
+<span class="material-symbols-outlined text-[10px] text-electric-yellow leading-none">lock</span>
+</a>
+<button class="liquid-btn-primary interactive-press px-2 py-0.5 rounded-full font-label-caps text-[8.5px] font-bold uppercase tracking-wider flex items-center gap-0.5 shadow-sm">
+<span class="">Book</span>
+<span class="material-symbols-outlined text-[8.5px] leading-none font-bold">arrow_outward</span>
+</button>
+</div></div></nav>
+<!-- Main Content -->
+<main class="flex-grow relative z-10">
+<!-- Hero Section -->
+<section class="relative flex flex-col items-center justify-center min-h-screen w-full overflow-hidden px-4 pt-16 pb-4" id="hero"><div class="relative z-10 w-full max-w-[1440px] mx-auto text-center flex flex-col items-center justify-center my-auto"><div class="reveal-up active mb-2 flex justify-center is-visible"><img alt="J3 Auto Care Logo" class="h-auto mx-auto object-contain drop-shadow-[0_8px_20px_rgba(253,224,71,0.3)]" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAOVjP9sNwLX23LAluQRE_1fWsctBoQbpvF-zM6IYEVHMBi9zthzeOLnVAXeS_DsOcOhcti5pFI7-F9aNLT5hfkRLOFdHfqCecMhnsFPx64M6tGiqQ8e8FCEadHylPrSss_ZbFYQBgS_2TCMJv8_vnN43tSbmyCGwM8K5960RiYSPWQnHIDvD-Ag7D-9a-jYTt_FaKeWQr6Ix4E7M7RczI_fu8tQhobTvrD400J6ShiccrSX7vZwytRVIWeJnZuIEmseg" style="width: 42px;"></div><h1 class="font-display-lg tracking-[0.22em] mb-2 reveal-up active uppercase leading-[1.1] text-center font-bold relative select-none flex justify-center is-visible"><div class="relative flex justify-center items-center"></div></h1><div class="reveal-up active max-w-xs mx-auto mb-3.5 is-visible"><p class="text-slate-400 font-body-md text-[10px] leading-relaxed text-center px-1">Precision engineering, bespoke surface transformations,</p><div class="">&nbsp;and elite tinting tailored for discerning&nbsp;</div><p></p><p class=""></p></div><div class="flex flex-row w-auto max-w-xs items-center justify-center gap-2 reveal-up active mx-auto is-visible px-2"><a class="liquid-btn-primary interactive-press inline-flex items-center justify-center gap-1.5 w-28 h-8 px-3 py-1.5 font-label-caps text-[8.5px] font-bold tracking-wider rounded-xl shadow-sm whitespace-nowrap" href="#services"><span class="material-symbols-outlined leading-none text-xs">tune</span><span class="">Services</span></a><a class="liquid-btn-glass interactive-press inline-flex items-center justify-center gap-1.5 w-28 h-8 text-white px-3 py-1.5 font-label-caps text-[8.5px] font-bold tracking-wider rounded-xl whitespace-nowrap" href="#book"><span class="material-symbols-outlined leading-none text-xs text-electric-yellow">calendar_month</span><span class="">Book</span></a></div></div></section>
+<!-- Partner Logos Infinite Marquee -->
+<section class="relative w-full overflow-hidden z-10 border-y border-white/5 bg-[#050507]/80 reveal-marquee-up is-visible active py-1" id="brand-partners-marquee" style="--marquee-item-h: 36px; filter: none !important; backdrop-filter: none !important;"><style class="" id="marquee-scroll-entrance-styles">  #brand-partners-marquee {
+    opacity: 0;
+    transform: translateY(36px) scale(0.99);
+    transition: opacity 1.35s cubic-bezier(0.16, 1, 0.3, 1), transform 1.35s cubic-bezier(0.16, 1, 0.3, 1), border-color 1.2s ease;
+    will-change: opacity, transform;
+  }
+  #brand-partners-marquee.is-visible, #brand-partners-marquee.active {
+    opacity: 1 !important;
+    transform: translateY(0) scale(1) !important;
+    border-color: rgba(255, 255, 255, 0.08) !important;
+  }
+  #brand-partners-marquee .marquee-wrapper {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.15s, transform 1.4s cubic-bezier(0.16, 1, 0.3, 1) 0.15s;
+    will-change: opacity, transform;
+  }
+  #brand-partners-marquee.is-visible .marquee-wrapper, #brand-partners-marquee.active .marquee-wrapper {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }</style><style>
+    @keyframes marqueeScrollLeft {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    @keyframes marqueeScrollRight {
+      0% { transform: translateX(-50%); }
+      100% { transform: translateX(0); }
+    }
+    .marquee-track-left {
+      display: flex;
+      width: max-content;
+      animation: marqueeScrollLeft 32s linear infinite;
+    }
+    .marquee-track-right {
+      display: flex;
+      width: max-content;
+      animation: marqueeScrollRight 32s linear infinite;
+    }
+    .marquee-mask-edges {
+      -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 88%, transparent 100%);
+      mask-image: linear-gradient(to right, transparent 0%, rgba(0,0,0,1) 12%, rgba(0,0,0,1) 88%, transparent 100%);
+    }
+    .brand-logo-item {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease, filter 0.3s ease;
+      height: 56px;
+      user-select: none;
+    }
+    .brand-logo-item:hover {
+      transform: scale(1.12);
+      filter: drop-shadow(0 0 16px rgba(253,224,71,0.6));
+    }
+    .brand-logo-item img {
+      height: 44px;
+      max-height: 46px;
+      width: auto;
+      object-fit: contain;
+      mix-blend-mode: screen;
+    }
+    .logo-pure-white {
+      filter: drop-shadow(0 0 6px rgba(255,255,255,0.45));
+    }
+    .logo-native-yellow {
+      filter: drop-shadow(0 0 8px rgba(253,224,71,0.55));
+    }
+</style>
+<div class="marquee-wrapper marquee-mask-edges flex flex-col w-full overflow-hidden select-none gap-0.5 py-0.5"><div class="flex overflow-hidden w-full"><div class="marquee-track-left flex items-center flex-nowrap shrink-0 pr-6 gap-6"><div class="brand-logo-item shrink-0 logo-pure-white"><img alt="W Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXe1SE6fBm84q02AwFjwnQG1saUr3ocp_klbX1YGAzuBMB_SKWAiPK8n2tJXLfz3Bj1fDdUGMzyP72PBLZHFBAc_Kfqp6CldbtCwG1Bjp2v_g2JUrvj5ZK_gOm5Svm11CWNyfBFXB-SLQlPvHIzlRh4ScHj3itN_975La4IIq5jgI5ZVs59zs-CWEyEzPkgi85LvBLt7GmW3qYYGgy4Lzs4zsf6OUNFH1t2xr2bHVLkghrNGorH5GHYggKS8gCT-tdCA" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="STC Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmNIH-SKZsc6TtWe1ZXVHYgKVze9cROrFa3WwqxCtILoXvECY5sfGj_DVfJGEiv6OC0US3CBS73L0bh6qm6GUDrxChE3eCVVDsW005FU3fwRbUiHyaSN7c_JyJNE4a8z3LolXeK3nmlMafBZBQyYkfNsW3P_kqqYU3zrBwTx8LK43ssqcqYRzpJY_jG0VzhAEpJOIznKJxgzllQFOCUhi9PE26sUWDXSnYEzFFsJoyD9ARoSd6W8l6diTHhrQyuv3-aQ" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-pure-white"><img alt="3M Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAubQYTDlQdbM9Y043fOJqdKFSyJzgOvC-YmGFBVR1jvbK_xYZDFbBXywfZt7MNdaIBTYbfq76ZHb0VNbJ1WHXT4PqQmZlGT7DNpyqCc7bXd1oWxhc5LdNkLCoZAo7aB6V5o-ilfbb_JcDuqw8keBicZ59917UvlT_EPaDQJj8AcOCV19kNre_x3S4gAWaP2Qo_uBrxagff_FDcXTnyhqufxnUFC9mAWgpeJm5VWMBM7eeKDumK34RR0luSDu6ALHPyzw" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Menzerna Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9x67N9wuclmvYrklBV1SZiTXP7p7kF3rq6trwItlEdOxjS6G5y6y7GGOd3dcWkS5zaRt2NbbIQZQCNlsNW5YD7CaeByw-fu8ZVsluzrUcU4dSAZBjPta-zyV3A8G2ohV3hZu8Adc9Mh8tLUzp8z0p41Z33-Hu--QehZ6tHbbbtms8u5l63u656BKzR4S0HpLZx9tPL9q9naRlt4CPSj8gGuZtIYfAt5liQoECpkdO1tKKrBl6pfS2wNtRwX5FoiwbUg" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-pure-white"><img alt="K Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBb-pod_EBk_vMTCpM_tin-9_37MxtV-Ncpa7TI-coPf2iTK1wcyZDwq3ix036OFnQf3TWgkHgvRYtTah02FBZ9eUUDRT5HjpbQ0r9JGJiJo1k4KeYnnijeXbCIwkFxw-8lF_BVvUk0nJVCZAKU8AwY5ETuwc1hPn8nxUSIrB4WLs9_sg8UR-DGFv_Vs_xmHhPzXsUdYPncTFNYHp7Nn0Y9BsxxDC70X90UdzKa7Qx0zCMRNbSI93vADD2tlcbBZNsa1g" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Garware Hi-Tech Films Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZh9zqtnxtxzsYUGlNoiq1rxdHR_pstPTFSJV2FSWSKzFld04YcoSOVNBvIXV7th4HdpI7KyvwKjtDjjvR6fh2gsxxIXfgsy41O4WpZnxk0Y4UYvnQuq-1HWCj5ywoDOIb96Ir_VCPoM18mxFsG3AUyzBsUkJcDckTKL-cPpkE3ZgQcVZXcDzedIgVMRg9GXHfnxuA0zKMIuMbItnHomJuqMh8EEIsQ2DMUt-MQzcZ8eEzXt-MCvJjF5x0WM7LPr6lqg" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-pure-white"><img alt="W Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDxuYeeGrVb5zEksHFOocjOr-Yet5mu5C47AwsVXFO-UMInVFLAOCfYkMnbcwQ251WmVYORDeEkXgl8UKbNn-2JeIAQ80QjIVH0UM5oDwQoeOk2PiVKvJrqQ8ixr2VIAcfdJ9tWlId8Adpjsy8auyrcqVLQ3SlSyuqHoVDVGZFG3792lbCzlEshUw_f5ZPlIofqx6XH3xJ3_KYiHgHNmltuR8CK0bZ70D9UxLsi8HoDgJV7CmW7AJKAL8jdVdfZ5008Iw" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="STC Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAzSIoEBxQjirlU-dyE-iqgTs0YJsK8j96RkAYT1N98GswTINquTAiqh9p2l4OPG1XHiCq2WiGWgELHek6VyTsQai0vDEpEiF6JMGvFLaP9ZG-f0Ip8W1hgJCM0INayRNe0lls3VbU_O9pdGVYpRxI9-EzGRBn00OqtGSsS78Ne7JS1EXbjVu7UA2qj7RHWL4kOvzsykCQmGjfrEQt0f4_kjUtUfekzxI5M67I9YhOST6OzlWuWN2X8cORS7E2ypoV-w" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-pure-white"><img alt="3M Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3xCsO3WmurYsFGYcDdOBBuFl2MmFtOqATHiFY99C7WQsCbEEIxEGNKX0nfRC920BeRTHER-w4NzGkTQeX0q8ExslrubAi8_rmUsk1YVR5bArA-1FKcmKWjzp8Ia1Lvc_QM8lpgHKDQO6C91zmaJBcWka_pChEwc2DiK1Tj9X5lqnMcDUV7ZvYd7kHciGr0nKQRZrbgAoJz49ThHBuBaXSlVfSB7c8jTuwyqSCGhahrNGT2NgDp50G69lmNNMFZnFSnA" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Menzerna Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaO2BWxJ5h6Z1bfwLjnKgFGg62rv31z-TtDWDJ8-RwR0lai6Tk4W_Odl76R1MU5UakFQ70f0C0TryH1DWftyjrrFec-KA5vZSbV16LcKqm0Bz6PzxpaCpsBdSEiePr4aZnPx25cVoAPOx8Pms3ClbU4AEfNWPT80I7TCswFzax4dfaRfmGiC_mDF8q_0aMb6QHkWzpE2q0OoRveFejxETELSbXCwIDanino0x_qEHYXMZVJ5pFHRGoGtmMTA9IKX_Rww" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-pure-white"><img alt="K Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBMuWyXlM1z9LyRiCmfwLCwnNt3--2glBriDoemRXJkTn-engzxVBn3m-VTtGJuepZIK02u7_XDbAr02QYvMwVbj8yG_LK2eWgCDH1DyjEoxPTbRtZjBTpHHmAQVcJKP7xzLQTLLIguKPYkKbCWPRvJR-6BzUogrU9M_NwOrBJ_gky2TNQCgC8zMTPdulqCm9VH-sJV6_pgx3MOWpOrJGoAxaugKLG-7LdIkUNE_PMHKjtmFy8m6tXy6aYy0XLRg2i6SA" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Garware Hi-Tech Films Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCq3jtd9NMYylP5Q2yJUbpSGK_UUODbuTlPVbS8BC7r9cOEf7uJZUkqbPr-IXD1hjbms1b2w7lWaPzAivtQJjc1gUglA9AWxiLyspKbCGVd5RFWjKu6rNrwPlfuEzJTd6V96gHhhpqxX3GuvHp_X96Flv-3aODq0adxPvNy3LYU-m_1V9oiQvrk1JExI_YwcX2h0Yisrt4KOuvrYGH3ykeBrnEuBRqUF8SMu_RFBe-w6SlN7ikWVyttO4ZhIqKflNBVPQ" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div></div></div><div class="flex overflow-hidden w-full"><div class="marquee-track-right flex items-center flex-nowrap shrink-0 pr-6 gap-6"><div class="brand-logo-item shrink-0 logo-pure-white"><img alt="K Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZyAjkd5G-g7NbEvNzfQnDpov8eYPxKfZlorrTgslLZ80w0ZlcUu6-8fTlb-kZ0k6_z61UbiZ88xJoujL_cIzP76EbeUep5UjX3bamj5EAIZm67l5Z5ihzUhcptt8MMx7siHwWStbfqOeivEObBiQqISxfkGiQR3cWtQGrmDJa-C7RCxzOJVNTQ8wb_mlpsVyXMDv05ugksuegUehkWOHqS2VhEuQoU4Z5E_yxHsVGwHTu192ZOSvebI_5Z7MSZpXPbQ" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Menzerna Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD1IBCjHiK_URMShciA7aik0kfqTzKwy67QyfPwnH42pE2idX5ldecV-WaW7yA3JhAJ8Sv0b8DqesqmvrJpDcGNK6Pqt158TUo6krNV3P1HMnzLhoIYMGk5G3pJ_tOuSO3EEKlXI7PPx2nsoov2PYhuKTHogCYkZhWC507pMu3m2LJrzwruKOcmCBy6svWKGFaBIqIR88B4bGnfoMLCmL7ds1qQugJpV4DGAmZTwjRJvXMwGCPTwc6ou9_g92CGDT4IJg" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-pure-white"><img alt="W Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6qpcqWuIl-Iex_benciwKjrlzVx3klG6e01_c7TaGTLa2AvY7KCYORekCEkws2OE4l207lQqfDYZp-1ZDqn5_1IAX79xsTcUF3NutYQuGH1BNJYst69HohV2e9uq9DDGMNYXlr7f3zohgbY6rZut9m6YnGbXN4rTDSRlfVGyYXzfU7nVdJdsJvJ41lhTNVsexDXJz4beUyF7b5jl6pz5ooAdecKA8qivZDZfjsfSLR0MMEmsMGlZzrafas8mgmpBtAg" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Garware Hi-Tech Films Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAo7UA0Mn3JsYjH-JUjCH2mVglcs6mgRoI6Q1j3qqSgglJSDPWiF7CE2usT4AigJQwpGn06VSHtBPg0mZfFtL8m2AG8iBaJ1P0VgTz7nWGCZ7-8Z9QFsJFb01XbJ45WpVBH6u8hCBQ-nYp_eFaVDu8Zi-6fm4S9TWae6WNyM8Wvi8EfuORqitZy_AfeOZbu2MYgGuVdivZzwT-dB873Wl0s5nL3I8Xsx6_qNTpkF6MbXIEm0bN5Mau0N-6aJktkRJ2ajQ" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-pure-white"><img alt="3M Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsdjfHRfdLcySr1sYjA7U-HR2pDA7z6sfx2VUt3INy8ctp9ymMqyHrPWxtRBuaUvidg43a8W1eRgemq3q6qGPosCPXb84PAsECSVSO6DgVz5TbIpWu3wzOu2S4SFHt8D46ezsg_EKpeeqheTZhQKNMVuF6DRbuFL6AyH2TJN1QuKzB4Z5i_mrwHkdU1y7Q5DaOiosN1Jpl-IMnJwrqiuy4FpQ3hs2aWcV7FNG3VhGV5wIW1oD_-eaYcaPp-ehJ3cMG1A" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="STC Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBYVzVAQ-5GEPk5eeZYyg_NtAAI6z9V9mW6edqmok1zmbVx7w7K2M1eGYIuzoMy27nCHonzApCtI9OfQyAS_iOf5pRP6ODz5gMfQQ7T-TcGyFeg5-Mnm0U6ic1ZQHNLiJgua7GywsIDY45C5cXi1_T8Pc7QFIxUkq0iSUT5kRlcBRMnOxYYn2QVl2Gvo6M8TA6I4AAFVyEZSQwk6Dpp2tFyhTd2RRjxhP_Xmw8eO1lcUM2VHQI4l4aPj5nM-nfD6NVpLg" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-pure-white"><img alt="K Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDj8uwK1uvtklBbwcjxY-0F3o1nL36KFOI9b-GLfmd2szfONCvABCu8xNjQj-U7Z0zfh7JjCU57Wur_tQqWK6novW_zXFzKtcWhs2vUacMgTRDPYknK3nv6PZ1yqqHjHU0atrj7CF9r5eO1oCFe19Wig6Jp8xVrlXZiB5XMSGvFut_xqa3_CPepDDhCV38r6n0amROeONV-AZA2Xygucebfl4cUXkjUtzINPRxVE1edI2tbiwfgdvug_Gqal1UYv3NDbg" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Menzerna Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA_uO4N8FqwGUiGlbfD1Jd8eVaLnZfMhzQtzN24Q2vepCV9HXc5tHQYegdZxPjCys1rJo_8pRUGc-RGeOHMU4e9EFLrdSpYdkwgtMqzWWlqs_YDQS4jTTUUrGrSUfWdibBo2snU85Gqa3lvz_YgCdNblw35VtWbLLmbX01zTTQ1yb5Ge0K_fgZvoOcqiAuxVhrOXarihEY8oG0dzQDadD2YQP-qu_FPxPpwpYMGXzz_bFllDrMxcUbcwfe0qnv1xuh5bg" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-pure-white"><img alt="W Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAGblCrByn6LgQlgzgnb19_QwZOn6UPxdpyKOEjjeYdoFrozFpuZ2QREmoRmQHFSqNZVnJxU8zCDo0rHbBDo8724W9-n4O1bYixfxD_UrjCgymjRk32s2dMqfYeYVZx2r6hhqZyzht25FrwRKCDEIroH9ySTTi-_7CeMUx5jj4HyiIRRVQFmUTEP2J5zvwdX6RyVLlIhADOILWqE6gy27dkkBAxixVaUkU1IYLSG0ThEbA0_9vMk0XP1m9CJeIBr938eg" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="Garware Hi-Tech Films Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBGiTj8vDABgfdnmiTwz7Ki7OiDwBUjU-NVcDxGbyvQUOjGeaYSHxXf8sJw8zDpxYgP3oNUmaoJfXxI-J3Gqi0VIHIVDJ_mFXR2bhFsTimfTPJ9TtKV_FMRsvCNIeJgKV4tY5CU2QtFhob3kfOIp4qBLLZes2HTluA-jG2H9A_dr1i3dKUolBNoCEW7B82km--aGimmLIo6G7wakbcq9cA_VErE33JeM-aveiDcgUscs5mpOBY1aezR6fcD9wvpl8O_kg" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-pure-white"><img alt="3M Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAx_HiEEWl_tMd5jEjNESHESw9iX1S7t_IrJrBbI4z1rfd3dNt8dvr_qBtyo6Z4FoLQBl8L-DbPu6hNC_Bwkm5BtpLaQweF-CDUo-JTQTDFVZPYC_wTNq36Ujquz3_xe-rOTtTuEDv0k5nNFcnSiwy8v3Qzc9IiC4wFnOcQ9V_VX3NgKKRjp_AfZQJ-iN0K2UX2_O5vW6sXxDg1u0jbt7xvrrOWDw2TGeAk9k5rNfvedYlzztMdeQ9vn53pCzJK5ZmNzw" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div><div class="brand-logo-item shrink-0 logo-native-yellow"><img alt="STC Logo" class="w-auto object-contain h-7" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNzoZT4Nzm0JR3UFqJzbf1KhGp8MWniDd5LLomJsAo98H6HnsY_Fug0o9BKLmoP9joWUESUl3E3DQtWfMThF3U0SYYhHzZwNfG3NDboe-fH1IPsFOkfGH4RnZMRm1y7Pj9gRsnfHD9fWfwEyzTYWDt0Pz3Iu10YnscKKbTdUJ5G3vIP1wMKR0h-8qkaE4cZvX51dSPuL3C4kK1c2N06RLkWvIUoYD2huefXSMk_AUkmiSQQYir05T9G8cbE2ZMjLD90A" style="height: 26px; max-height: 28px; width: auto; object-fit: contain;"></div></div></div></div>
+<script class="" id="marquee-entrance-observer">
+  (function() {
+    const marquee = document.getElementById('brand-partners-marquee');
+    if (!marquee) return;
+    const checkVisibility = () => {
+      const rect = marquee.getBoundingClientRect();
+      if (rect.top <= window.innerHeight * 0.92) {
+        marquee.classList.add('is-visible', 'active');
+      }
+    };
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            marquee.classList.add('is-visible', 'active');
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -20px 0px' });
+      obs.observe(marquee);
+    }
+    window.addEventListener('scroll', checkVisibility, { passive: true });
+    checkVisibility();
+  })();
+</script></section>
+<!-- Services Section with Synchronized Liquid Center Line & Frosted Reveal Boxes -->
+<style id="service-card-side-glow-styles">
+  @keyframes sideGlowSweep {
+    0% { transform: translateY(-100%); opacity: 0; }
+    50% { opacity: 1; }
+    100% { transform: translateY(100%); opacity: 0; }
+  }
+  .liquid-glass-card.active-glow {
+    border-color: rgba(253, 224, 71, 0.55) !important;
+    box-shadow: 0 0 28px -4px rgba(253, 224, 71, 0.45), inset 0 0 16px -4px rgba(253, 224, 71, 0.22) !important;
+  }
+  .liquid-glass-card.active-glow .card-directional-glow {
+    opacity: 1 !important;
+  }
+  .side-glow-runner {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: linear-gradient(180deg, transparent, #fde047 50%, transparent);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 10;
+    transition: opacity 0.4s ease;
+  }
+  .card-left .side-glow-runner {
+    right: 0;
+  }
+  .card-right .side-glow-runner {
+    left: 0;
+  }
+  .liquid-glass-card.active-glow .side-glow-runner {
+    opacity: 1;
+    animation: sideGlowSweep 2.4s ease-in-out infinite;
+  }
+</style><section class="relative max-w-[1440px] mx-auto z-10 px-4 md:px-8 pb-20 pt-4" id="services">
+<!-- Section Header -->
+<div class="text-center reveal-up active is-visible mb-3" id="services-heading-block" style="transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);"><h2 class="font-headline-xl text-white tracking-tight mb-2 drop-shadow-sm text-base">
+Our <span class="text-transparent bg-clip-text bg-gradient-to-r from-electric-yellow via-yellow-200 to-electric-yellow">Services</span>
+</h2>
+<p class="text-[11px] leading-relaxed max-w-xs text-slate-400 mx-auto">Elite bespoke applications to protect&nbsp;</p><div class="">and elevate vehicle aesthetics.</div><p></p></div>
+<!-- Alternating Bento Flow Container -->
+<div class="relative flex flex-col w-full max-w-[1440px] mx-auto py-4 gap-4 items-center" id="services-flow-container">
+<!-- Card 1: Tinting -->
+<div class="flex flex-col w-full relative items-center" data-service-index="0">
+<div class="liquid-glass-card card-left spotlight-card interactive-press service-scroll-reveal group cursor-pointer w-full flex flex-col justify-between min-h-[220px] mx-auto max-w-sm box-revealed active-glow px-4 py-2.5" data-reveal-direction="left" style="--mouse-x: 51px; --mouse-y: 28.25px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-3">
+<div class="service-icon-wrapper w-10 h-10 rounded-xl border border-white/20 flex items-center justify-center shadow-sm bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_8px_rgba(253,224,71,0.5)] w-5 h-5" fill="none" viewBox="0 0 32 32"><path d="M5 24.5L9 8C9.5 6.8 10.6 6 11.9 6H25.2C26.7 6 27.8 7.3 27.5 8.8L24.5 24.5" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M8 24.5H25" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path><path d="M11 10.5H23.5L21.5 21H8.5L11 10.5Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-dasharray="1.5 1.5" stroke-width="1.2"></path><path d="M2 13L6 15L2 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path><path d="M3 9L6.5 11.5" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</div>
+</div>
+<h3 class="font-headline-md text-base text-white tracking-tight group-hover:text-electric-yellow transition-colors mb-1">Tinting</h3>
+<p class="font-body-md text-xs text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors mb-2">Advanced ceramic heat rejection films for superior thermal comfort, infrared block, and optical-grade privacy.</p>
+<div class="service-card-footer flex justify-between items-center pt-3 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm shrink-0 ml-auto">
+<span class="material-symbols-outlined arrow-icon text-sm leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="side-glow-runner"></div></div>
+</div>
+<!-- Card 2: Wrapping -->
+<div class="flex flex-col w-full relative items-center" data-service-index="1">
+<div class="liquid-glass-card card-right spotlight-card interactive-press service-scroll-reveal group cursor-pointer w-full flex flex-col justify-between min-h-[220px] mx-auto max-w-sm box-revealed active-glow px-4 py-2.5" data-reveal-direction="right" style="--mouse-x: 251.5800018310547px; --mouse-y: 15.949951171875px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-3">
+<div class="service-icon-wrapper w-10 h-10 rounded-xl border border-white/20 flex items-center justify-center shadow-sm bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_8px_rgba(253,224,71,0.5)] w-5 h-5" fill="none" viewBox="0 0 32 32"><path d="M5 7C5 5.34315 6.34315 4 8 4C9.65685 4 11 5.34315 11 7V22C11 23.6569 9.65685 25 8 25C6.34315 25 5 23.6569 5 22V7Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-width="1.8"></path><ellipse cx="8" cy="7" fill="currentColor" rx="3" ry="1.5"></ellipse><path d="M8 25C13 25 15 22 20 22H27C27.5523 22 28 21.5523 28 21V15C28 14.4477 27.5523 14 27 14H18C14 14 11 16 8 16" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M17 9L23 5L26 9.5L20 13.5L17 9Z" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path><path d="M16 10.5L19.5 15" stroke="currentColor" stroke-linecap="round" stroke-width="1.6"></path></svg>
+</div>
+</div>
+<h3 class="font-headline-md text-base text-white tracking-tight group-hover:text-electric-yellow transition-colors mb-1">Wrapping</h3>
+<p class="font-body-md text-xs text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors mb-2">Full bespoke color transitions, satin stealth finishes, and architectural vinyl installations with flawless edge tucks.</p>
+<div class="service-card-footer flex justify-between items-center pt-3 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm shrink-0 ml-auto">
+<span class="material-symbols-outlined arrow-icon text-sm leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="side-glow-runner"></div></div>
+</div>
+<!-- Card 3: Premium Stickers -->
+<div class="flex flex-col w-full relative items-center" data-service-index="2">
+<div class="liquid-glass-card card-left spotlight-card interactive-press service-scroll-reveal group cursor-pointer w-full flex flex-col justify-between min-h-[220px] mx-auto max-w-sm box-revealed active-glow px-4 py-2.5" data-reveal-direction="left" style="--mouse-x: 203.5800018310547px; --mouse-y: 128.949951171875px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-3">
+<div class="service-icon-wrapper w-10 h-10 rounded-xl border border-white/20 flex items-center justify-center shadow-sm bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_8px_rgba(253,224,71,0.5)] w-5 h-5" fill="none" viewBox="0 0 32 32"><path d="M26 17V7C26 5.34315 24.6569 4 23 4H7C5.34315 4 4 5.34315 4 7V23C4 24.6569 5.34315 26 7 26H17" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path><path d="M17 26C17 20.5 20.5 17 26 17L17 26Z" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M18 12L22 8L27 13L23 17L18 12Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path><path d="M20 10L14 16L12 20L16 18L22 12" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"></path></svg>
+</div>
+</div>
+<h3 class="font-headline-md text-base text-white tracking-tight group-hover:text-electric-yellow transition-colors mb-1">Premium Stickers</h3>
+<p class="font-body-md text-xs text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors mb-2">Micro-precision vector cutting, holographic reflective accents, and weather-resistant liveries for bespoke branding.</p>
+<div class="service-card-footer flex justify-between items-center pt-3 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm shrink-0 ml-auto">
+<span class="material-symbols-outlined arrow-icon text-sm leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="side-glow-runner"></div></div>
+</div>
+<!-- Card 4: Polishing -->
+<div class="flex flex-col w-full relative items-center" data-service-index="3">
+<div class="liquid-glass-card card-right spotlight-card interactive-press service-scroll-reveal group cursor-pointer w-full flex flex-col justify-between min-h-[220px] mx-auto max-w-sm box-revealed active-glow px-4 py-2.5" data-reveal-direction="right" style="--mouse-x: 157.17127990722656px; --mouse-y: 221.84542846679688px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-3">
+<div class="service-icon-wrapper w-10 h-10 rounded-xl border border-white/20 flex items-center justify-center shadow-sm bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_8px_rgba(253,224,71,0.5)] w-5 h-5" fill="none" viewBox="0 0 32 32"><ellipse cx="15" cy="22" fill="currentColor" fill-opacity="0.25" rx="11" ry="4.5" stroke="currentColor" stroke-width="1.8"></ellipse><ellipse cx="15" cy="20" rx="8" ry="3" stroke="currentColor" stroke-dasharray="1.5 2" stroke-width="1.2"></ellipse><path d="M11 18V13C11 11.5 12.5 10 14 10H19C20.5 10 22 11 22 12.5V18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M20 10V6C20 4.9 20.9 4 22 4H27C28.1 4 29 4.9 29 6V8C29 9.1 28.1 10 27 10H22" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-linejoin="round" stroke-width="1.6"></path><path d="M5 7L6 9L8 10L6 11L5 13L4 11L2 10L4 9L5 7Z" fill="currentColor" stroke="currentColor" stroke-width="0.5"></path><path d="M26 18L26.6 19.4L28 20L26.6 20.6L26 22L25.4 20.6L24 20L25.4 19.4L26 18Z" fill="currentColor" stroke="currentColor" stroke-width="0.5"></path></svg>
+</div>
+</div>
+<h3 class="font-headline-md text-base text-white tracking-tight group-hover:text-electric-yellow transition-colors mb-1">Polishing</h3>
+<p class="font-body-md text-xs text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors mb-2">Multi-stage optical paint correction to eradicate swirls, restoring mirror reflections and crystal-clear clarity.</p>
+<div class="service-card-footer flex justify-between items-center pt-3 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm shrink-0 ml-auto">
+<span class="material-symbols-outlined arrow-icon text-sm leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="side-glow-runner"></div></div>
+</div>
+<!-- Card 5: Coating -->
+<div class="flex flex-col w-full relative items-center" data-service-index="4">
+<div class="liquid-glass-card card-left spotlight-card interactive-press service-scroll-reveal group cursor-pointer w-full flex flex-col justify-between min-h-[220px] mx-auto max-w-sm box-revealed active-glow px-4 py-2.5" data-reveal-direction="left" style="--mouse-x: 15px; --mouse-y: 116.25px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-3">
+<div class="service-icon-wrapper w-10 h-10 rounded-xl border border-white/20 flex items-center justify-center shadow-sm bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_8px_rgba(253,224,71,0.5)] w-5 h-5" fill="none" viewBox="0 0 32 32"><path d="M16 3L27 8V16C27 22.5 22.2 27.5 16 29C9.8 27.5 5 22.5 5 16V8L16 3Z" fill="currentColor" fill-opacity="0.12" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M16 7.5L22 11V18L16 21.5L10 18V11L16 7.5Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.2"></path><path d="M16 11.5C16 11.5 12.5 16 12.5 18C12.5 19.9 14.1 21.5 16 21.5C17.9 21.5 19.5 19.9 19.5 18C19.5 16 16 11.5 16 11.5Z" fill="currentColor" fill-opacity="0.4" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"></path></svg>
+</div>
+</div>
+<h3 class="font-headline-md text-base text-white tracking-tight group-hover:text-electric-yellow transition-colors mb-1">Coating</h3>
+<p class="font-body-md text-xs text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors mb-2">Industrial-grade 10H ceramic graphene matrices for extreme hydrophobic self-cleaning and environmental shielding.</p>
+<div class="service-card-footer flex justify-between items-center pt-3 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm shrink-0 ml-auto">
+<span class="material-symbols-outlined arrow-icon text-sm leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="side-glow-runner"></div></div>
+</div>
+<!-- Card 6: Accessories -->
+<div class="flex flex-col w-full relative items-center" data-service-index="5">
+<div class="liquid-glass-card card-right spotlight-card interactive-press service-scroll-reveal group cursor-pointer w-full flex flex-col justify-between min-h-[220px] mx-auto max-w-sm box-revealed active-glow px-4 py-2.5" data-reveal-direction="right" style="--mouse-x: 251.5800018310547px; --mouse-y: 179.949951171875px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-3">
+<div class="service-icon-wrapper w-10 h-10 rounded-xl border border-white/20 flex items-center justify-center shadow-sm bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_8px_rgba(253,224,71,0.5)] w-5 h-5" fill="none" viewBox="0 0 32 32"><path d="M3 9C8.5 7 23.5 7 29 9L27.5 13C22 11.5 10 11.5 4.5 13L3 9Z" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M8 12L9.5 21" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path><path d="M24 12L22.5 21" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path><path d="M5 24C12 22.5 20 22.5 27 24L28 27C21 25.5 11 25.5 4 27L5 24Z" fill="currentColor" fill-opacity="0.2" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path><path d="M13 16L19 16" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</div>
+</div>
+<h3 class="font-headline-md text-base text-white tracking-tight group-hover:text-electric-yellow transition-colors mb-1">Accessories</h3>
+<p class="font-body-md text-xs text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors mb-2">Precision fitment of aerodynamic splitters, carbon fiber trims, custom illumination, and performance cockpit upgrades.</p>
+<div class="service-card-footer flex justify-between items-center pt-3 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm shrink-0 ml-auto">
+<span class="material-symbols-outlined arrow-icon text-sm leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="side-glow-runner"></div></div>
+</div>
+<!-- Card 7: Hydro Dipping -->
+<div class="flex flex-col w-full relative items-center" data-service-index="6">
+<div class="liquid-glass-card card-left spotlight-card interactive-press service-scroll-reveal group cursor-pointer w-full flex flex-col justify-between min-h-[220px] mx-auto max-w-sm box-revealed active-glow px-4 py-2.5" data-reveal-direction="left" style="--mouse-x: 225.5800018310547px; --mouse-y: 104.949951171875px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-3">
+<div class="service-icon-wrapper w-10 h-10 rounded-xl border border-white/20 flex items-center justify-center shadow-sm bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_8px_rgba(253,224,71,0.5)] w-5 h-5" fill="none" viewBox="0 0 32 32"><circle cx="16" cy="14" fill="currentColor" fill-opacity="0.15" r="8" stroke="currentColor" stroke-width="1.8"></circle><circle cx="16" cy="14" r="3.5" stroke="currentColor" stroke-width="1.5"></circle><path d="M16 6V10.5M16 17.5V22M8 14H12.5M19.5 14H24" stroke="currentColor" stroke-linecap="round" stroke-width="1.4"></path><path d="M3 18C5.5 16.5 8 16.5 10.5 18C13 19.5 15.5 19.5 18 18C20.5 16.5 23 16.5 25.5 18C27 18.9 28.5 18.9 29.5 18" stroke="currentColor" stroke-linecap="round" stroke-width="1.8"></path><path d="M3 24C6 22.5 9 22.5 12 24C15 25.5 18 25.5 21 24C24 22.5 27 22.5 29 24" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path></svg>
+</div>
+</div>
+<h3 class="font-headline-md text-base text-white tracking-tight group-hover:text-electric-yellow transition-colors mb-1">Hydro Dipping</h3>
+<p class="font-body-md text-xs text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors mb-2">Submersion printing engineered for complex curved surfaces, geometric carbon weaves, and custom marbling graphics.</p>
+<div class="service-card-footer flex justify-between items-center pt-3 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm shrink-0 ml-auto">
+<span class="material-symbols-outlined arrow-icon text-sm leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="side-glow-runner"></div></div>
+</div>
+<!-- Card 8: Smart Painting -->
+<div class="flex flex-col w-full relative items-center" data-service-index="7">
+<div class="liquid-glass-card card-right spotlight-card interactive-press service-scroll-reveal group cursor-pointer w-full flex flex-col justify-between min-h-[220px] mx-auto max-w-sm box-revealed px-4 py-2.5" data-reveal-direction="right" style="--mouse-x: 149.5800018310547px; --mouse-y: 12.949951171875px;">
+<div class="card-directional-glow"></div>
+<div class="relative z-10">
+<div class="flex items-center justify-between mb-3">
+<div class="service-icon-wrapper w-10 h-10 rounded-xl border border-white/20 flex items-center justify-center shadow-sm bg-white/5 backdrop-blur-md">
+<svg class="service-icon-svg text-electric-yellow drop-shadow-[0_0_8px_rgba(253,224,71,0.5)] w-5 h-5" fill="none" viewBox="0 0 32 32"><path d="M12 4H18L17 9H13L12 4Z" fill="currentColor" fill-opacity="0.3" stroke="currentColor" stroke-linejoin="round" stroke-width="1.5"></path><path d="M15 9V12M11 12H19C20.1 12 21 12.9 21 14V17H12L8 15V13C8 12.4 8.4 12 9 12H11Z" stroke="currentColor" stroke-linejoin="round" stroke-width="1.8"></path><path d="M16 17V26L13 28L12 23L14 17" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8"></path><path d="M8 14H4" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path><path d="M3 10L1 8M3 18L1 20M2 14H0" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"></path><circle cx="26" cy="8" r="3.5" stroke="currentColor" stroke-dasharray="1 1" stroke-width="1"></circle><path d="M26 3V13M21 8H31" stroke="currentColor" stroke-width="1"></path></svg>
+</div>
+</div>
+<h3 class="font-headline-md text-base text-white tracking-tight group-hover:text-electric-yellow transition-colors mb-1">Smart Painting</h3>
+<p class="font-body-md text-xs text-slate-400 leading-relaxed group-hover:text-slate-300 transition-colors mb-2">Computer-calibrated spectrophotometer color matching and localized spot blends for undetectable factory finish restoration.</p>
+<div class="service-card-footer flex justify-between items-center pt-3 border-t border-white/5 w-full">
+<div class="service-action-btn interactive-press w-8 h-8 rounded-full border border-white/30 flex items-center justify-center text-white bg-white/5 shadow-sm shrink-0 ml-auto">
+<span class="material-symbols-outlined arrow-icon text-sm leading-none font-semibold">arrow_forward</span>
+</div>
+</div>
+</div>
+<div class="side-glow-runner"></div></div>
+</div></div>
+</section>
+</main>
+<!-- Liquid Glass Floating Footer -->
+<footer class="relative w-full border-t border-white/10 z-10 bg-[#030304]/90 backdrop-blur-2xl transition-all duration-700 py-8 mt-12" id="footer-section"><div id="footer-wash-layer"></div>
+<div class="relative z-10 flex flex-col gap-6 px-4 max-w-sm mx-auto">
+<!-- Brand Header -->
+<div class="bottom-reveal-block flex flex-col items-center text-center gap-2 active is-visible"><div class="flex items-end gap-1 pb-0.5"><img alt="JETHRI AUTO CARE" class="w-auto object-contain h-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCx1pPxINP938jLG0W8F5M0HiAAGWuj_RrG13hwfXc4FR3bvcsreVs9wNoOXhPU2G7lLvd_siXDGd6xrLKPKhJkFHaTNtKzAvm17pYv3FMXOEDHpMmGwiP0d_FDCEQHqv3QzDJLzvVVVtWaDnMbFiaslXOpOAw4ZjVpIEaqzXYuYcBNrXRKS65d6893enKm4jlnlxqHQb-G5m_7Q0LG4QM0nGEodEFIrXIOHETkm_WUm7VSKkMDPudNWIQ7rPZyCpNMCw" style="height: 12px;"><span class="font-display-lg text-white font-bold tracking-wider text-[10px] leading-none">AUTO CARE</span></div><p class="font-body-md text-slate-400 leading-relaxed max-w-xs text-[7.5px]">Precision engineered detailing and aesthetic modification for the discerning automotive enthusiast.</p></div>
+<!-- Click to Connect Grid -->
+<div class="bottom-reveal-block flex flex-col gap-4 active is-visible"><div class="flex flex-col gap-3"><div class="flex items-center justify-between px-0.5"><div class="flex items-center gap-2"><h4 class="font-label-mono text-electric-yellow uppercase tracking-widest font-semibold flex items-center gap-1.5 text-[8px]"><span class="">Direct Channels</span><span class="w-1.5 h-1.5 rounded-full bg-electric-yellow/90 inline-block shadow-[0_0_8px_rgba(253,224,71,0.8)]"></span></h4></div></div><div class="grid grid-cols-2 gap-1.5 w-full"><a href="tel:+18005555322" class="liquid-glass-card interactive-press group relative rounded-xl px-2.5 py-1.5 flex items-center gap-2 border border-white/10 bg-[#07070a]/75 backdrop-blur-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-electric-yellow/40"><div class="w-6 h-6 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-electric-yellow shrink-0 group-hover:bg-electric-yellow/10 group-hover:border-electric-yellow/40 drop-shadow-[0_0_8px_rgba(253,224,71,0.4)] transition-all"><span class="material-symbols-outlined text-[13px] leading-none">call</span></div><div class="flex flex-col text-left overflow-hidden"><span class="font-headline-md text-[10px] text-white font-semibold tracking-tight group-hover:text-electric-yellow transition-colors leading-tight">Direct Call</span></div><span class="material-symbols-outlined text-[10px] text-slate-500 ml-auto group-hover:text-electric-yellow group-hover:translate-x-0.5 transition-all">arrow_forward</span></a><a href="https://wa.me/" target="_blank" rel="noopener" class="liquid-glass-card interactive-press group relative rounded-xl px-2.5 py-1.5 flex items-center gap-2 border border-white/10 bg-[#07070a]/75 backdrop-blur-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-electric-yellow/40"><div class="w-6 h-6 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-electric-yellow shrink-0 group-hover:bg-electric-yellow/10 group-hover:border-electric-yellow/40 drop-shadow-[0_0_8px_rgba(253,224,71,0.4)] transition-all"><svg class="w-3.5 h-3.5 text-electric-yellow" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91C2.13 13.66 2.59 15.36 3.45 16.86L2.05 22L7.3 20.62C8.75 21.41 10.38 21.83 12.04 21.83C17.5 21.83 21.95 17.38 21.95 11.92C21.95 9.27 20.92 6.78 19.05 4.91C17.18 3.03 14.69 2 12.04 2M12.05 3.67C14.25 3.67 16.31 4.53 17.87 6.09C19.42 7.65 20.28 9.72 20.28 11.92C20.28 16.46 16.58 20.15 12.04 20.15C10.56 20.15 9.11 19.76 7.85 19L7.55 18.83L4.43 19.65L5.26 16.61L5.06 16.29C4.24 15 3.8 13.47 3.8 11.91C3.81 7.37 7.5 3.67 12.05 3.67M9.11 7.04C8.94 7.04 8.66 7.11 8.43 7.35C8.19 7.6 7.52 8.23 7.52 9.53C7.52 10.83 8.46 12.08 8.6 12.26C8.73 12.44 10.46 15.22 13.18 16.27C15.44 17.15 15.9 16.97 16.37 16.93C16.84 16.89 17.89 16.31 18.11 15.7C18.33 15.08 18.33 14.56 18.26 14.45C18.19 14.34 18.02 14.28 17.76 14.15C17.5 14.02 16.22 13.39 15.98 13.3C15.74 13.21 15.57 13.17 15.4 13.43C15.23 13.68 14.73 14.28 14.58 14.45C14.43 14.63 14.28 14.65 14.02 14.52C13.76 14.39 12.92 14.11 11.93 13.23C11.16 12.54 10.64 11.69 10.49 11.43C10.34 11.18 10.47 11.04 10.6 10.91C10.72 10.79 10.86 10.6 11 10.44C11.14 10.28 11.18 10.16 11.27 9.98C11.36 9.8 11.31 9.65 11.25 9.53C11.18 9.4 10.68 8.18 10.47 7.68C10.27 7.2 10.06 7.26 9.9 7.25C9.76 7.25 9.59 7.04 9.11 7.04Z"></path></svg></div><div class="flex flex-col text-left overflow-hidden"><span class="font-headline-md text-[10px] text-white font-semibold tracking-tight group-hover:text-electric-yellow transition-colors leading-tight">WhatsApp</span></div><span class="material-symbols-outlined text-[10px] text-slate-500 ml-auto group-hover:text-electric-yellow group-hover:translate-x-0.5 transition-all">arrow_forward</span></a><a href="https://instagram.com/" target="_blank" rel="noopener" class="liquid-glass-card interactive-press group relative rounded-xl px-2.5 py-1.5 flex items-center gap-2 border border-white/10 bg-[#07070a]/75 backdrop-blur-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-electric-yellow/40"><div class="w-6 h-6 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-electric-yellow shrink-0 group-hover:bg-electric-yellow/10 group-hover:border-electric-yellow/40 drop-shadow-[0_0_8px_rgba(253,224,71,0.4)] transition-all"><svg class="w-3.5 h-3.5 text-electric-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg></div><div class="flex flex-col text-left overflow-hidden"><span class="font-headline-md text-[10px] text-white font-semibold tracking-tight group-hover:text-electric-yellow transition-colors leading-tight">Instagram</span></div><span class="material-symbols-outlined text-[10px] text-slate-500 ml-auto group-hover:text-electric-yellow group-hover:translate-x-0.5 transition-all">arrow_forward</span></a><a href="https://facebook.com/" target="_blank" rel="noopener" class="liquid-glass-card interactive-press group relative rounded-xl px-2.5 py-1.5 flex items-center gap-2 border border-white/10 bg-[#07070a]/75 backdrop-blur-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-electric-yellow/40"><div class="w-6 h-6 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-electric-yellow shrink-0 group-hover:bg-electric-yellow/10 group-hover:border-electric-yellow/40 drop-shadow-[0_0_8px_rgba(253,224,71,0.4)] transition-all"><svg class="w-3.5 h-3.5 text-electric-yellow" viewBox="0 0 24 24" fill="currentColor"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"></path></svg></div><div class="flex flex-col text-left overflow-hidden"><span class="font-headline-md text-[10px] text-white font-semibold tracking-tight group-hover:text-electric-yellow transition-colors leading-tight">Facebook</span></div><span class="material-symbols-outlined text-[10px] text-slate-500 ml-auto group-hover:text-electric-yellow group-hover:translate-x-0.5 transition-all">arrow_forward</span></a><a href="https://maps.google.com/" target="_blank" rel="noopener" class="liquid-glass-card interactive-press group relative rounded-xl px-2.5 py-1.5 flex items-center gap-2 border border-white/10 bg-[#07070a]/75 backdrop-blur-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-electric-yellow/40"><div class="w-6 h-6 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-electric-yellow shrink-0 group-hover:bg-electric-yellow/10 group-hover:border-electric-yellow/40 drop-shadow-[0_0_8px_rgba(253,224,71,0.4)] transition-all"><svg class="w-3.5 h-3.5 text-electric-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7z"></path><circle cx="12" cy="9" r="2.5"></circle></svg></div><div class="flex flex-col text-left overflow-hidden"><span class="font-headline-md text-[10px] text-white font-semibold tracking-tight group-hover:text-electric-yellow transition-colors leading-tight">Location</span></div><span class="material-symbols-outlined text-[10px] text-slate-500 ml-auto group-hover:text-electric-yellow group-hover:translate-x-0.5 transition-all">arrow_forward</span></a><a href="mailto:concierge@j3autocare.com" class="liquid-glass-card interactive-press group relative rounded-xl px-2.5 py-1.5 flex items-center gap-2 border border-white/10 bg-[#07070a]/75 backdrop-blur-2xl shadow-[0_4px_20px_rgba(0,0,0,0.5)] transition-all duration-300 hover:border-electric-yellow/40"><div class="w-6 h-6 rounded-lg bg-white/5 border border-white/10 flex items-center justify-center text-electric-yellow shrink-0 group-hover:bg-electric-yellow/10 group-hover:border-electric-yellow/40 drop-shadow-[0_0_8px_rgba(253,224,71,0.4)] transition-all"><svg class="w-3.5 h-3.5 text-electric-yellow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div><div class="flex flex-col text-left overflow-hidden"><span class="font-headline-md text-[10px] text-white font-semibold tracking-tight group-hover:text-electric-yellow transition-colors leading-tight">G mail</span></div><span class="material-symbols-outlined text-[10px] text-slate-500 ml-auto group-hover:text-electric-yellow group-hover:translate-x-0.5 transition-all">arrow_forward</span></a></div></div></div>
+<!-- Copyright info -->
+<div class="bottom-reveal-block pt-4 border-t border-white/10 text-center flex flex-col items-center gap-2 active is-visible"><div class="flex items-center gap-3 text-[7.5px] font-label-mono text-slate-400"><a href="#privacy" class="hover:text-electric-yellow transition-colors">Privacy Policy &amp; Security</a><span class="">•</span><a href="#warranty" class="hover:text-electric-yellow transition-colors">Service Guarantee &amp; Warranty</a></div><p class="font-body-md text-slate-500 leading-relaxed max-w-xs text-[7px]">© 2025 JETHRI AUTO CARE. All rights reserved. Precision engineered detailing for discerning automotive enthusiasts.</p></div>
+</div></footer><script id="service-side-glow-scroll-observer">
+  (function() {
+    const cards = document.querySelectorAll('#services-flow-container .liquid-glass-card');
+    if (!cards.length) return;
+
+    const handleScrollSync = () => {
+      const windowHeight = window.innerHeight;
+      const revealTrigger = windowHeight * 0.92;
+      const glowTopTrigger = windowHeight * 0.78;
+      const glowBottomTrigger = windowHeight * 0.12;
+
+      cards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+
+        // 1. Upcoming reveal: gentle slide-up & blur removal
+        if (rect.top <= revealTrigger) {
+          card.classList.add('box-revealed');
+        } else if (rect.top > windowHeight * 1.02) {
+          card.classList.remove('box-revealed');
+        }
+
+        // 2. Dynamic side glow & yellow edge runner activation
+        if (rect.top <= glowTopTrigger && rect.bottom >= glowBottomTrigger) {
+          card.classList.add('active-glow');
+        } else {
+          card.classList.remove('active-glow');
+        }
+      });
+    };
+
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          const card = entry.target;
+          const rect = card.getBoundingClientRect();
+          if (entry.isIntersecting) {
+            card.classList.add('box-revealed');
+            if (rect.top <= window.innerHeight * 0.78 && rect.bottom >= window.innerHeight * 0.12) {
+              card.classList.add('active-glow');
+            }
+          } else {
+            if (rect.top > window.innerHeight * 0.85) {
+              card.classList.remove('active-glow');
+            }
+          }
+        });
+      }, {
+        root: null,
+        rootMargin: '0px 0px -10% 0px',
+        threshold: 0.1
+      });
+
+      cards.forEach(card => observer.observe(card));
+    }
+
+    window.addEventListener('scroll', handleScrollSync, { passive: true });
+    window.addEventListener('resize', handleScrollSync, { passive: true });
+    handleScrollSync();
+  })();
+</script>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Individual Card Mouse Spotlight Tracking
+        const spotlightCards = document.querySelectorAll('.spotlight-card');
+        spotlightCards.forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            });
+        });
+
+        // Tactile Smooth Micro-Press Ripple & Radial Glow
+        function createSmoothRipple(target, clientX, clientY) {
+            let container = target.querySelector(':scope > .liquid-ripple-container');
+            if (!container) {
+                container = document.createElement('div');
+                container.className = 'liquid-ripple-container';
+                target.appendChild(container);
+            }
+
+            const rect = target.getBoundingClientRect();
+            const posX = (clientX !== undefined && clientX !== null) ? (clientX - rect.left) : (rect.width / 2);
+            const posY = (clientY !== undefined && clientY !== null) ? (clientY - rect.top) : (rect.height / 2);
+            const diameter = Math.max(rect.width, rect.height) * 1.6;
+
+            const ripple = document.createElement('span');
+            ripple.className = 'ripple-wave';
+            ripple.style.width = `${diameter}px`;
+            ripple.style.height = `${diameter}px`;
+            ripple.style.left = `${posX}px`;
+            ripple.style.top = `${posY}px`;
+
+            container.appendChild(ripple);
+
+            ripple.addEventListener('animationend', () => {
+                ripple.remove();
+                if (container.children.length === 0) {
+                    container.remove();
+                }
+            });
+        }
+
+        const interactiveButtons = document.querySelectorAll(
+            '.interactive-press, .liquid-btn-primary, .liquid-btn-glass, .film-brand-chip, .service-action-btn'
+        );
+
+        interactiveButtons.forEach(elem => {
+            elem.addEventListener('pointerdown', (e) => {
+                createSmoothRipple(elem, e.clientX, e.clientY);
+            });
+        });
+
+        // Header & Bottom Reveal Observers
+        const revealObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active', 'is-visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, { root: null, rootMargin: '0px 0px -40px 0px', threshold: 0.12 });
+
+        document.querySelectorAll('.reveal-up, .bottom-reveal-block').forEach(el => {
+            revealObserver.observe(el);
+        });
+
+        // Footer Illumination Observer
+        const footerSection = document.getElementById('footer-section');
+        if (footerSection) {
+            const footerObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        footerSection.classList.add('footer-illuminated');
+                    } else {
+                        footerSection.classList.remove('footer-illuminated');
+                    }
+                });
+            }, { threshold: 0.15 });
+            footerObserver.observe(footerSection);
+        }
+    });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body></html>
